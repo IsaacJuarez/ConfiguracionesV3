@@ -23,3 +23,28 @@ C:\Users\IJUAREZ\Documents\Visual Studio 2015\Projects\Fuji.Configuraciones\Fuji
 C:\Users\IJUAREZ\Documents\Visual Studio 2015\Projects\Fuji.Configuraciones\Fuji.Configuraciones\obj\Debug\Fuji.Configuraciones.exe
 C:\Users\IJUAREZ\Documents\Visual Studio 2015\Projects\Fuji.Configuraciones\Fuji.Configuraciones\obj\Debug\Fuji.Configuraciones.pdb
 C:\Users\IJUAREZ\Documents\Visual Studio 2015\Projects\Fuji.Configuraciones\Fuji.Configuraciones\obj\Debug\Fuji.Configuraciones.csprojResolveAssemblyReference.cache
+C:\Users\ijuarez\source\repos\Fuji.Configuraciones\Fuji.Configuraciones\bin\Debug\Fuji.Configuraciones.exe.config
+C:\Users\ijuarez\source\repos\Fuji.Configuraciones\Fuji.Configuraciones\bin\Debug\Fuji.Configuraciones.exe.manifest
+C:\Users\ijuarez\source\repos\Fuji.Configuraciones\Fuji.Configuraciones\bin\Debug\Fuji.Configuraciones.application
+C:\Users\ijuarez\source\repos\Fuji.Configuraciones\Fuji.Configuraciones\bin\Debug\Fuji.Configuraciones.exe
+C:\Users\ijuarez\source\repos\Fuji.Configuraciones\Fuji.Configuraciones\bin\Debug\Fuji.Configuraciones.pdb
+C:\Users\ijuarez\source\repos\Fuji.Configuraciones\Fuji.Configuraciones\bin\Debug\EntityFramework.dll
+C:\Users\ijuarez\source\repos\Fuji.Configuraciones\Fuji.Configuraciones\bin\Debug\EntityFramework.xml
+C:\Users\ijuarez\source\repos\Fuji.Configuraciones\Fuji.Configuraciones\obj\Debug\MainWindow.g.cs
+C:\Users\ijuarez\source\repos\Fuji.Configuraciones\Fuji.Configuraciones\obj\Debug\Configuracion.g.cs
+C:\Users\ijuarez\source\repos\Fuji.Configuraciones\Fuji.Configuraciones\obj\Debug\SitioName.g.cs
+C:\Users\ijuarez\source\repos\Fuji.Configuraciones\Fuji.Configuraciones\obj\Debug\App.g.cs
+C:\Users\ijuarez\source\repos\Fuji.Configuraciones\Fuji.Configuraciones\obj\Debug\Fuji.Configuraciones_Content.g.cs
+C:\Users\ijuarez\source\repos\Fuji.Configuraciones\Fuji.Configuraciones\obj\Debug\Fuji.Configuraciones_MarkupCompile.cache
+C:\Users\ijuarez\source\repos\Fuji.Configuraciones\Fuji.Configuraciones\obj\Debug\Fuji.Configuraciones_MarkupCompile.lref
+C:\Users\ijuarez\source\repos\Fuji.Configuraciones\Fuji.Configuraciones\obj\Debug\MainWindow.baml
+C:\Users\ijuarez\source\repos\Fuji.Configuraciones\Fuji.Configuraciones\obj\Debug\Configuracion.baml
+C:\Users\ijuarez\source\repos\Fuji.Configuraciones\Fuji.Configuraciones\obj\Debug\SitioName.baml
+C:\Users\ijuarez\source\repos\Fuji.Configuraciones\Fuji.Configuraciones\obj\Debug\Fuji.Configuraciones.g.resources
+C:\Users\ijuarez\source\repos\Fuji.Configuraciones\Fuji.Configuraciones\obj\Debug\Fuji.Configuraciones.Properties.Resources.resources
+C:\Users\ijuarez\source\repos\Fuji.Configuraciones\Fuji.Configuraciones\obj\Debug\Fuji.Configuraciones.csproj.GenerateResource.Cache
+C:\Users\ijuarez\source\repos\Fuji.Configuraciones\Fuji.Configuraciones\obj\Debug\Fuji.Configuraciones.csproj.CoreCompileInputs.cache
+C:\Users\ijuarez\source\repos\Fuji.Configuraciones\Fuji.Configuraciones\obj\Debug\Fuji.Configuraciones.exe.manifest
+C:\Users\ijuarez\source\repos\Fuji.Configuraciones\Fuji.Configuraciones\obj\Debug\Fuji.Configuraciones.application
+C:\Users\ijuarez\source\repos\Fuji.Configuraciones\Fuji.Configuraciones\obj\Debug\Fuji.Configuraciones.exe
+C:\Users\ijuarez\source\repos\Fuji.Configuraciones\Fuji.Configuraciones\obj\Debug\Fuji.Configuraciones.pdb

@@ -1908,7 +1908,8 @@ namespace Fuji.Configuraciones
                 {
                     ListenerService();
                     SyncService();
-                    SenderService();
+                    MoveServive();
+                    //SenderService();
                     MessageBox.Show("Servicios Reiniciados.");
                 }
             }
@@ -1916,6 +1917,44 @@ namespace Fuji.Configuraciones
             {
                 Log.EscribeLog("Existe un error en btnRunServ_Click: " + ebR.Message);
                 MessageBox.Show("Existe un error al reiniciar el servicio SCP: " + ebR.Message);
+            }
+        }
+
+        private void MoveServive()
+        {
+            string nombreServicio = "MoveFileService";
+            ServiceController c = new ServiceController(nombreServicio);
+            int timeoutMilisegundos = 5000;
+            TimeSpan timeout = TimeSpan.FromMilliseconds(timeoutMilisegundos);
+            try
+            {
+                if (c != null && c.Status == ServiceControllerStatus.Running)
+                {
+                    c.Stop();
+                    c.WaitForStatus(ServiceControllerStatus.Stopped, timeout);
+                    Log.EscribeLog("MoveFileService Detenido.");
+                }
+                c.Refresh();
+                if (c != null && c.Status == ServiceControllerStatus.Paused)
+                {
+                    c.Stop();
+                    c.WaitForStatus(ServiceControllerStatus.Stopped, timeout);
+                    Log.EscribeLog("MoveFileService Detenido.");
+                    c.Start();
+                    c.WaitForStatus(ServiceControllerStatus.Running, timeout);
+                    Log.EscribeLog("MoveFileService Iniciado.");
+                }
+                c.Refresh();
+                if (c != null && c.Status == ServiceControllerStatus.Stopped)
+                {
+                    c.Start();
+                    c.WaitForStatus(ServiceControllerStatus.Running, timeout);
+                    Log.EscribeLog("MoveFileService Iniciado.");
+                }
+            }
+            catch (Exception ex)
+            {
+                Log.EscribeLog("Existe un error al iniciar servicio MoveFileService: " + ex.Message);
             }
         }
 

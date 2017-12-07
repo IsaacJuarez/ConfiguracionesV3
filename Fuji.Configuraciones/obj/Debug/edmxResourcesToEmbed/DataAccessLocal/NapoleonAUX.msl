@@ -61,6 +61,10 @@
     <EntitySetMapping Name="tbl_MST_EstudioAUX">
       <EntityTypeMapping TypeName="NAPOLEONAUXModel.tbl_MST_EstudioAUX">
         <MappingFragment StoreEntitySet="tbl_MST_EstudioAUX">
+          <ScalarProperty Name="StudyDescription" ColumnName="StudyDescription" />
+          <ScalarProperty Name="StudyID" ColumnName="StudyID" />
+          <ScalarProperty Name="vchEdad" ColumnName="vchEdad" />
+          <ScalarProperty Name="vchgenero" ColumnName="vchgenero" />
           <ScalarProperty Name="datFecha" ColumnName="datFecha" />
           <ScalarProperty Name="intTamanoTotal" ColumnName="intTamanoTotal" />
           <ScalarProperty Name="intNumeroArchivo" ColumnName="intNumeroArchivo" />

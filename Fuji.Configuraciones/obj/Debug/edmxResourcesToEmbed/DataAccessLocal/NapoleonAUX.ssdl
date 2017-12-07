@@ -67,6 +67,10 @@
     <Property Name="intNumeroArchivo" Type="int" />
     <Property Name="intTamanoTotal" Type="int" />
     <Property Name="datFecha" Type="datetime" />
+    <Property Name="vchgenero" Type="varchar" MaxLength="200" />
+    <Property Name="vchEdad" Type="varchar" MaxLength="200" />
+    <Property Name="StudyID" Type="varchar" MaxLength="100" />
+    <Property Name="StudyDescription" Type="varchar" MaxLength="200" />
   </EntityType>
   <Association Name="FK_CAT_Estudio_DET_Estudio">
     <End Role="tbl_CAT_EstatusAUX" Type="Self.tbl_CAT_EstatusAUX" Multiplicity="0..1" />

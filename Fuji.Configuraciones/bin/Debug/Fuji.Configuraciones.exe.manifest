@@ -14,16 +14,16 @@
       </applicationRequestMinimum>
       <requestedPrivileges xmlns="urn:schemas-microsoft-com:asm.v3">
         <!--
-          Opciones del manifiesto de Control de cuentas de usuario
+          Opciones del manifiesto de UAC
           Si desea cambiar el nivel de Control de cuentas de usuario de Windows, reemplace el 
-          nodo requestedExecutionLevel por alguno de los siguientes.
+          nodo requestedExecutionLevel por uno de los siguientes.
 
         <requestedExecutionLevel  level="asInvoker" uiAccess="false" />
         <requestedExecutionLevel  level="requireAdministrator" uiAccess="false" />
         <requestedExecutionLevel  level="highestAvailable" uiAccess="false" />
 
-         Si desea usar la virtualización de archivos y del Registro para la 
-         compatibilidad con versiones anteriores, elimine el nodo requestedExecutionLevel.
+         Si desea usar Virtualización de archivos y Registro para compatibilidad con 
+         versiones anteriores, elimine el nodo requestedExecutionLevel.
     -->
         <requestedExecutionLevel level="asInvoker" uiAccess="false" />
       </requestedPrivileges>
@@ -54,14 +54,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Fuji.Configuraciones.exe" size="1796032">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Fuji.Configuraciones.exe" size="1797568">
       <assemblyIdentity name="Fuji.Configuraciones" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>oOUtVVWiJDu8slFY7cShuesaQXJ6Nr597BfzvY2UQeo=</dsig:DigestValue>
+        <dsig:DigestValue>8c0vdh0yRgoixFzjcZlqGiAx1xqTZHfTgW7KCUswxrE=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -83,13 +83,13 @@
       <dsig:DigestValue>iF3VXbJKKfI/MebLQVmNOavNsJ9QHlizt0bOSNt+bTg=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="Fuji.Configuraciones.exe.config" size="2635">
+  <file name="Fuji.Configuraciones.exe.config" size="2645">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>h++Sacj340Tk3h5std3fneDuCnUAKFafmpKL+NJ30Tg=</dsig:DigestValue>
+      <dsig:DigestValue>6fsWqZOc1rKMsdxzaYUHoFP1f1Y9leKeDjF6wiXVBvY=</dsig:DigestValue>
     </hash>
   </file>
 </asmv1:assembly>

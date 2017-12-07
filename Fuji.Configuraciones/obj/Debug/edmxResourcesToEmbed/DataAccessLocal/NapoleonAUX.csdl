@@ -98,6 +98,10 @@
     <NavigationProperty Name="tbl_CAT_ModalidadAUX" Relationship="NAPOLEONAUXModel.FK_CAT_Modalidad_MST_Estudio" FromRole="tbl_MST_EstudioAUX" ToRole="tbl_CAT_ModalidadAUX" />
     <NavigationProperty Name="tbl_ConfigSitioAUX" Relationship="NAPOLEONAUXModel.FK_ConfigSitio_MST_Estudio" FromRole="tbl_MST_EstudioAUX" ToRole="tbl_ConfigSitioAUX" />
     <NavigationProperty Name="tbl_DET_EstudioAUX" Relationship="NAPOLEONAUXModel.FK_MST_Estudio_DET_Estudio" FromRole="tbl_MST_EstudioAUX" ToRole="tbl_DET_EstudioAUX" />
+    <Property Name="vchgenero" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="vchEdad" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="StudyID" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="StudyDescription" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
   </EntityType>
   <Association Name="FK_CAT_Estudio_DET_Estudio">
     <End Type="NAPOLEONAUXModel.tbl_CAT_EstatusAUX" Role="tbl_CAT_EstatusAUX" Multiplicity="0..1" />
