@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Configuraciones>
+  <sitio>
+    <claveSitio>SIT2</claveSitio>
+    <NombreSitio>SITIO 2</NombreSitio>
+    <AETitle>SIT2</AETitle>
+    <Activo>1</Activo>
+    <hostLocal>
+      <ip>192.168.1.142</ip>
+      <mask>255.255.255.0</mask>
+      <puerto>104</puerto>
+    </hostLocal>
+    <hostServer>
+      <ip>
+      </ip>
+      <puerto>-2147483648</puerto>
+    </hostServer>
+  </sitio>
+  <User>
+    <tipoUsuario>1</tipoUsuario>
+    <NombreUser>ADMIN</NombreUser>
+    <usuario>ADMIN</usuario>
+    <Pass>6259416442622b6e5232773d</Pass>
+  </User>
+</Configuraciones>

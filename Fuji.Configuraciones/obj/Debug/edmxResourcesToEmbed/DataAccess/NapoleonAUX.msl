@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="NAPOLEONAUXModelStoreContainer" CdmEntityContainer="NAPOLEONAUXEntities">
+    <EntitySetMapping Name="tbl_CAT_Estatus">
+      <EntityTypeMapping TypeName="NAPOLEONAUXModel.tbl_CAT_Estatus">
+        <MappingFragment StoreEntitySet="tbl_CAT_Estatus">
+          <ScalarProperty Name="bitActivo" ColumnName="bitActivo" />
+          <ScalarProperty Name="datFecha" ColumnName="datFecha" />
+          <ScalarProperty Name="vchClaveEstatus" ColumnName="vchClaveEstatus" />
+          <ScalarProperty Name="vchEstatusDesc" ColumnName="vchEstatusDesc" />
+          <ScalarProperty Name="intEstatusID" ColumnName="intEstatusID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_CAT_Modalidad">
+      <EntityTypeMapping TypeName="NAPOLEONAUXModel.tbl_CAT_Modalidad">
+        <MappingFragment StoreEntitySet="tbl_CAT_Modalidad">
+          <ScalarProperty Name="bitActivo" ColumnName="bitActivo" />
+          <ScalarProperty Name="datFecha" ColumnName="datFecha" />
+          <ScalarProperty Name="vchModalidadDesc" ColumnName="vchModalidadDesc" />
+          <ScalarProperty Name="vchModalidadClave" ColumnName="vchModalidadClave" />
+          <ScalarProperty Name="intModalidadID" ColumnName="intModalidadID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_ConfigSitio">
+      <EntityTypeMapping TypeName="NAPOLEONAUXModel.tbl_ConfigSitio">
+        <MappingFragment StoreEntitySet="tbl_ConfigSitio">
+          <ScalarProperty Name="bitActivo" ColumnName="bitActivo" />
+          <ScalarProperty Name="vchUserAdmin" ColumnName="vchUserAdmin" />
+          <ScalarProperty Name="datFechaSistema" ColumnName="datFechaSistema" />
+          <ScalarProperty Name="vchAETitleServer" ColumnName="vchAETitleServer" />
+          <ScalarProperty Name="in_tPuertoServer" ColumnName="in_tPuertoServer" />
+          <ScalarProperty Name="vchIPServidor" ColumnName="vchIPServidor" />
+          <ScalarProperty Name="vchPathLocal" ColumnName="vchPathLocal" />
+          <ScalarProperty Name="vchAETitle" ColumnName="vchAETitle" />
+          <ScalarProperty Name="intPuertoCliente" ColumnName="intPuertoCliente" />
+          <ScalarProperty Name="vchMaskCliente" ColumnName="vchMaskCliente" />
+          <ScalarProperty Name="vchIPCliente" ColumnName="vchIPCliente" />
+          <ScalarProperty Name="vchnombreSitio" ColumnName="vchnombreSitio" />
+          <ScalarProperty Name="vchClaveSitio" ColumnName="vchClaveSitio" />
+          <ScalarProperty Name="id_Sitio" ColumnName="id_Sitio" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_DET_Estudio">
+      <EntityTypeMapping TypeName="NAPOLEONAUXModel.tbl_DET_Estudio">
+        <MappingFragment StoreEntitySet="tbl_DET_Estudio">
+          <ScalarProperty Name="bitSync" ColumnName="bitSync" />
+          <ScalarProperty Name="datFecha" ColumnName="datFecha" />
+          <ScalarProperty Name="vchStudyInstanceUID" ColumnName="vchStudyInstanceUID" />
+          <ScalarProperty Name="vchPathFile" ColumnName="vchPathFile" />
+          <ScalarProperty Name="intSizeFile" ColumnName="intSizeFile" />
+          <ScalarProperty Name="vchNameFile" ColumnName="vchNameFile" />
+          <ScalarProperty Name="intEstatusID" ColumnName="intEstatusID" />
+          <ScalarProperty Name="intEstudioID" ColumnName="intEstudioID" />
+          <ScalarProperty Name="intDetEstudioID" ColumnName="intDetEstudioID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_MST_Estudio">
+      <EntityTypeMapping TypeName="NAPOLEONAUXModel.tbl_MST_Estudio">
+        <MappingFragment StoreEntitySet="tbl_MST_Estudio">
+          <ScalarProperty Name="datFecha" ColumnName="datFecha" />
+          <ScalarProperty Name="intTamanoTotal" ColumnName="intTamanoTotal" />
+          <ScalarProperty Name="intNumeroArchivo" ColumnName="intNumeroArchivo" />
+          <ScalarProperty Name="PatientName" ColumnName="PatientName" />
+          <ScalarProperty Name="PatientID" ColumnName="PatientID" />
+          <ScalarProperty Name="vchPatientBirthDate" ColumnName="vchPatientBirthDate" />
+          <ScalarProperty Name="vchAccessionNumber" ColumnName="vchAccessionNumber" />
+          <ScalarProperty Name="intModalidadID" ColumnName="intModalidadID" />
+          <ScalarProperty Name="id_Sitio" ColumnName="id_Sitio" />
+          <ScalarProperty Name="intEstudioID" ColumnName="intEstudioID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

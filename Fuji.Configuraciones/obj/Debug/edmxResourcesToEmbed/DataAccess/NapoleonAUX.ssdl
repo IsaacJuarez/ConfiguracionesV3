@@ -1,0 +1,142 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="NAPOLEONAUXModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="tbl_CAT_Estatus">
+    <Key>
+      <PropertyRef Name="intEstatusID" />
+    </Key>
+    <Property Name="intEstatusID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="vchEstatusDesc" Type="varchar" MaxLength="200" />
+    <Property Name="vchClaveEstatus" Type="varchar" MaxLength="200" />
+    <Property Name="datFecha" Type="datetime" />
+    <Property Name="bitActivo" Type="bit" />
+  </EntityType>
+  <EntityType Name="tbl_CAT_Modalidad">
+    <Key>
+      <PropertyRef Name="intModalidadID" />
+    </Key>
+    <Property Name="intModalidadID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="vchModalidadClave" Type="varchar" MaxLength="100" />
+    <Property Name="vchModalidadDesc" Type="varchar" MaxLength="200" />
+    <Property Name="datFecha" Type="datetime" />
+    <Property Name="bitActivo" Type="bit" />
+  </EntityType>
+  <EntityType Name="tbl_ConfigSitio">
+    <Key>
+      <PropertyRef Name="id_Sitio" />
+    </Key>
+    <Property Name="id_Sitio" Type="int" Nullable="false" />
+    <Property Name="vchClaveSitio" Type="varchar" MaxLength="200" />
+    <Property Name="vchnombreSitio" Type="varchar" MaxLength="200" />
+    <Property Name="vchIPCliente" Type="varchar" MaxLength="200" />
+    <Property Name="vchMaskCliente" Type="varchar" MaxLength="200" />
+    <Property Name="intPuertoCliente" Type="int" />
+    <Property Name="vchAETitle" Type="varchar" MaxLength="200" />
+    <Property Name="vchPathLocal" Type="varchar" MaxLength="200" />
+    <Property Name="vchIPServidor" Type="varchar" MaxLength="200" />
+    <Property Name="in_tPuertoServer" Type="int" />
+    <Property Name="vchAETitleServer" Type="varchar" MaxLength="200" />
+    <Property Name="datFechaSistema" Type="datetime" />
+    <Property Name="vchUserAdmin" Type="varchar" MaxLength="200" />
+    <Property Name="bitActivo" Type="bit" />
+  </EntityType>
+  <EntityType Name="tbl_DET_Estudio">
+    <Key>
+      <PropertyRef Name="intDetEstudioID" />
+    </Key>
+    <Property Name="intDetEstudioID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="intEstudioID" Type="int" />
+    <Property Name="intEstatusID" Type="int" />
+    <Property Name="vchNameFile" Type="varchar" MaxLength="200" />
+    <Property Name="intSizeFile" Type="int" />
+    <Property Name="vchPathFile" Type="varchar" MaxLength="200" />
+    <Property Name="vchStudyInstanceUID" Type="varchar" MaxLength="200" />
+    <Property Name="datFecha" Type="datetime" />
+    <Property Name="bitSync" Type="bit" />
+  </EntityType>
+  <EntityType Name="tbl_MST_Estudio">
+    <Key>
+      <PropertyRef Name="intEstudioID" />
+    </Key>
+    <Property Name="intEstudioID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="id_Sitio" Type="int" />
+    <Property Name="intModalidadID" Type="int" />
+    <Property Name="vchAccessionNumber" Type="varchar" MaxLength="200" />
+    <Property Name="vchPatientBirthDate" Type="varchar" MaxLength="200" />
+    <Property Name="PatientID" Type="varchar" MaxLength="200" />
+    <Property Name="PatientName" Type="varchar" MaxLength="200" />
+    <Property Name="intNumeroArchivo" Type="int" />
+    <Property Name="intTamanoTotal" Type="int" />
+    <Property Name="datFecha" Type="datetime" />
+  </EntityType>
+  <Association Name="FK_CAT_Estudio_DET_Estudio">
+    <End Role="tbl_CAT_Estatus" Type="Self.tbl_CAT_Estatus" Multiplicity="0..1" />
+    <End Role="tbl_DET_Estudio" Type="Self.tbl_DET_Estudio" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_CAT_Estatus">
+        <PropertyRef Name="intEstatusID" />
+      </Principal>
+      <Dependent Role="tbl_DET_Estudio">
+        <PropertyRef Name="intEstatusID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CAT_Modalidad_MST_Estudio">
+    <End Role="tbl_CAT_Modalidad" Type="Self.tbl_CAT_Modalidad" Multiplicity="0..1" />
+    <End Role="tbl_MST_Estudio" Type="Self.tbl_MST_Estudio" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_CAT_Modalidad">
+        <PropertyRef Name="intModalidadID" />
+      </Principal>
+      <Dependent Role="tbl_MST_Estudio">
+        <PropertyRef Name="intModalidadID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ConfigSitio_MST_Estudio">
+    <End Role="tbl_ConfigSitio" Type="Self.tbl_ConfigSitio" Multiplicity="0..1" />
+    <End Role="tbl_MST_Estudio" Type="Self.tbl_MST_Estudio" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_ConfigSitio">
+        <PropertyRef Name="id_Sitio" />
+      </Principal>
+      <Dependent Role="tbl_MST_Estudio">
+        <PropertyRef Name="id_Sitio" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MST_Estudio_DET_Estudio">
+    <End Role="tbl_MST_Estudio" Type="Self.tbl_MST_Estudio" Multiplicity="0..1" />
+    <End Role="tbl_DET_Estudio" Type="Self.tbl_DET_Estudio" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_MST_Estudio">
+        <PropertyRef Name="intEstudioID" />
+      </Principal>
+      <Dependent Role="tbl_DET_Estudio">
+        <PropertyRef Name="intEstudioID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="NAPOLEONAUXModelStoreContainer">
+    <EntitySet Name="tbl_CAT_Estatus" EntityType="Self.tbl_CAT_Estatus" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_CAT_Modalidad" EntityType="Self.tbl_CAT_Modalidad" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_ConfigSitio" EntityType="Self.tbl_ConfigSitio" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_DET_Estudio" EntityType="Self.tbl_DET_Estudio" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_MST_Estudio" EntityType="Self.tbl_MST_Estudio" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_CAT_Estudio_DET_Estudio" Association="Self.FK_CAT_Estudio_DET_Estudio">
+      <End Role="tbl_CAT_Estatus" EntitySet="tbl_CAT_Estatus" />
+      <End Role="tbl_DET_Estudio" EntitySet="tbl_DET_Estudio" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CAT_Modalidad_MST_Estudio" Association="Self.FK_CAT_Modalidad_MST_Estudio">
+      <End Role="tbl_CAT_Modalidad" EntitySet="tbl_CAT_Modalidad" />
+      <End Role="tbl_MST_Estudio" EntitySet="tbl_MST_Estudio" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ConfigSitio_MST_Estudio" Association="Self.FK_ConfigSitio_MST_Estudio">
+      <End Role="tbl_ConfigSitio" EntitySet="tbl_ConfigSitio" />
+      <End Role="tbl_MST_Estudio" EntitySet="tbl_MST_Estudio" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MST_Estudio_DET_Estudio" Association="Self.FK_MST_Estudio_DET_Estudio">
+      <End Role="tbl_MST_Estudio" EntitySet="tbl_MST_Estudio" />
+      <End Role="tbl_DET_Estudio" EntitySet="tbl_DET_Estudio" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
