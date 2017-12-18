@@ -108,59 +108,6 @@
                         </StackPanel>
                     </Grid>
                 </TabItem>
-                <TabItem Header="Servidor" Height="22" VerticalAlignment="Bottom">
-                    <Grid Background="#FFE5E5E5">
-                        <StackPanel>
-                            <Grid>
-                                <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="Auto" SharedSizeGroup="Label"/>
-                                    <ColumnDefinition Width="*"/>
-                                </Grid.ColumnDefinitions>
-                                <Label Grid.Column="0" Height="26" VerticalAlignment="Top" Grid.ColumnSpan="2" Margin="0,0,362,0" HorizontalAlignment="Right">IP</Label>
-                                <StackPanel Margin="206,0,0,0" Grid.Column="1">
-                                    <Grid Margin="5">
-                                        <Grid.ColumnDefinitions>
-                                            <ColumnDefinition Width="auto" />
-                                            <ColumnDefinition Width="auto" />
-                                            <ColumnDefinition Width="auto" />
-                                            <ColumnDefinition Width="auto" />
-                                            <ColumnDefinition Width="auto" />
-                                            <ColumnDefinition Width="auto" />
-                                            <ColumnDefinition Width="auto" />
-                                        </Grid.ColumnDefinitions>
-                                        <Grid.RowDefinitions>
-                                            <RowDefinition Height="Auto" />
-                                        </Grid.RowDefinitions>
-                                        <TextBox x:Name="txtIPS1" Text="" PreviewKeyDown="txtIPS1_PreviewKeyDown" PreviewTextInput="txtIPS1_PreviewTextInput" TextChanged="txtIPC1_TextChanged" PreviewKeyUp="txtIPS1_PreviewKeyUp" MaxLength="3" Width="50" />
-                                        <TextBlock FontWeight="Bold" Text="." Grid.Column="1"></TextBlock>
-                                        <TextBox x:Name="txtIPS2" Grid.Column="2" Text="" KeyDown="txtIPS2_KeyDown" PreviewTextInput="txtIPS2_PreviewTextInput" TextChanged="txtIPC1_TextChanged" MaxLength="3" PreviewKeyUp="txtIPS2_PreviewKeyUp" Width="50" />
-                                        <TextBlock FontWeight="Bold" Text="." Grid.Column="3"></TextBlock>
-                                        <TextBox x:Name="txtIPS3" Grid.Column="4" Text="" KeyDown="txtIPS3_KeyDown" PreviewTextInput="txtIPS3_PreviewTextInput" TextChanged="txtIPC1_TextChanged" MaxLength="3" PreviewKeyUp="txtIPS3_PreviewKeyUp" Width="50" />
-                                        <TextBlock FontWeight="Bold" Text="." Grid.Column="5"></TextBlock>
-                                        <TextBox x:Name="txtIPS4" Grid.Column="6" Text="" PreviewTextInput="txtIPS4_PreviewTextInput" TextChanged="txtIPC1_TextChanged" MaxLength="3" Width="50" />
-                                    </Grid>
-                                </StackPanel>
-                            </Grid>
-                            <Grid>
-                                <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="auto" SharedSizeGroup="Label"/>
-                                    <ColumnDefinition Width="*"/>
-                                </Grid.ColumnDefinitions>
-                                <Label Grid.Column="0" RenderTransformOrigin="4.709,0.641" Grid.ColumnSpan="2" Margin="0,0,363,0" HorizontalAlignment="Right">Puerto</Label>
-                                <TextBox Grid.Column="1" Text=""  MaxLength="5" x:Name="txtPuertoServer" PreviewTextInput="txtPuertoServer_PreviewTextInput" Margin="210,0,0,0" TextChanged="txtPuertoServer_TextChanged"></TextBox>
-                            </Grid>
-                            <Grid>
-                                <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="auto" SharedSizeGroup="Label"/>
-                                    <ColumnDefinition Width="*"/>
-                                </Grid.ColumnDefinitions>
-                                <Label Grid.Column="0"  HorizontalAlignment="Right" Grid.ColumnSpan="2" Margin="0,0,365,0" Width="84">AETitle Server</Label>
-                                <TextBox x:Name="txtAETitleServer" Text="" Grid.Column="1" Margin="208,0,0,0"></TextBox>
-                            </Grid>
-                            <Button x:Name="btnSaveServer" Content="Guardar" Click="btnSaveServer_Click" Margin="453,10,10,10" />
-                        </StackPanel>
-                    </Grid>
-                </TabItem>
             </TabControl>
             <Button x:Name="btnRunServ" Content="Reiniciar Servicio" Click="btnRunServ_Click" Margin="10,1,477,0"/>
             <Button x:Name="btnSalir" Content="Salir" BorderBrush="Azure" Margin="487,-16,10,10" Click="btnSalir_Click" />

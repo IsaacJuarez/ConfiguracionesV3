@@ -63,15 +63,16 @@
     <SignManifests>true</SignManifests>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="EntityFramework, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\..\SetupFeed2V3\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\..\SetupFeed2V3\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.configuration" />
     <Reference Include="System.Data" />
-    <Reference Include="System.Data.Entity" />
     <Reference Include="System.Data.Linq" />
     <Reference Include="System.EnterpriseServices" />
     <Reference Include="System.Management" />
@@ -240,6 +241,9 @@
     <None Include="Service References\Feed2Service\Fuji.Configuraciones.Feed2Service.ProyectoResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Service References\Feed2Service\Fuji.Configuraciones.Feed2Service.tbl_CAT_Feed2Version.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Service References\Feed2Service\Fuji.Configuraciones.Feed2Service.tbl_CAT_Proyecto.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -249,26 +253,29 @@
     <None Include="Service References\Feed2Service\Fuji.Configuraciones.Feed2Service.tbl_ConfigSitio.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Service References\Feed2Service\Fuji.Configuraciones.Feed2Service.tbl_DET_Sitio.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Service References\Feed2Service\Fuji.Configuraciones.Feed2Service.tbl_RegistroSitio.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Service References\Feed2Service\Fuji.Configuraciones.Feed2Service.tbl_REL_ProyectoSitio.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\Feed2Service\NapoleonService.wsdl" />
-    <None Include="Service References\Feed2Service\NapoleonService.xsd">
+    <None Include="Service References\Feed2Service\NapoleonService1.wsdl" />
+    <None Include="Service References\Feed2Service\NapoleonService5.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\Feed2Service\NapoleonService1.xsd">
+    <None Include="Service References\Feed2Service\NapoleonService51.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\Feed2Service\NapoleonService2.xsd">
+    <None Include="Service References\Feed2Service\NapoleonService52.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\Feed2Service\NapoleonService3.xsd">
+    <None Include="Service References\Feed2Service\NapoleonService53.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\Feed2Service\NapoleonService4.xsd">
+    <None Include="Service References\Feed2Service\NapoleonService54.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Theme\StyleSheet1.less" />
@@ -301,13 +308,13 @@
       <DependentUpon>NapoleonAUX.edmx</DependentUpon>
       <LastGenOutput>NapoleonAUX.cs</LastGenOutput>
     </Content>
+    <None Include="Service References\Feed2Service\NapoleonService1.disco" />
     <None Include="Service References\Feed2Service\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
     <None Include="Service References\Feed2Service\configuration.svcinfo" />
     <None Include="Service References\Feed2Service\configuration91.svcinfo" />
-    <None Include="Service References\Feed2Service\NapoleonService.disco" />
     <Resource Include="assets\offline.png" />
     <Resource Include="assets\online.png" />
     <Resource Include="assets\WallPaperWhite.jpg" />

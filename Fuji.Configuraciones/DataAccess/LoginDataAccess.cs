@@ -135,6 +135,7 @@ namespace Fuji.Configuraciones.DataAccess
             {
                 resquest.username = user;
                 resquest.password = password;
+                resquest.vchSitio = "";
                 response = NapoleonDA.Logear(resquest);
                 User = response.CurrentUser;
             }
@@ -145,6 +146,25 @@ namespace Fuji.Configuraciones.DataAccess
                 Log.EscribeLog("Error en LoginDataAccess.Logear: " + exc.Message);
             }
             return response;
+        }
+
+        /// <summary>
+        /// Verifica si existe coneccion con el servidor
+        /// </summary>
+        /// <returns></returns>
+        public bool getValidacionServer()
+        {
+            bool valido = false;
+            try
+            {
+                valido = NapoleonDA.getPingServer();
+            }
+            catch (Exception exc)
+            {
+                valido = false;
+                Log.EscribeLog("Error en getValidacionServer.Logear: " + exc.Message);
+            }
+            return valido;
         }
 
         //public List<tbl_CAT_Usuarios> getUsuarios()

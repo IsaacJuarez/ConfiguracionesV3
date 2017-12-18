@@ -7,14 +7,14 @@
     <framework targetVersion="4.5.2" profile="Full" supportedRuntime="4.0.30319" />
   </compatibleFrameworks>
   <dependency>
-    <dependentAssembly dependencyType="install" codebase="Fuji.Configuraciones.exe.manifest" size="5076">
+    <dependentAssembly dependencyType="install" codebase="Fuji.Configuraciones.exe.manifest" size="5779">
       <assemblyIdentity name="Fuji.Configuraciones.exe" version="1.0.0.12" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>79wYkteg13XNwcXnqUEJofpczPs8I0GctkRv6sEw/38=</dsig:DigestValue>
+        <dsig:DigestValue>MJtzQXz0ZGXCz6mxzmEywjVMwVFcYH0y+YxLMQ8GLnw=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

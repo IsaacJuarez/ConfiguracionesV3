@@ -29,6 +29,9 @@ namespace Fuji.Configuraciones.Feed2Service {
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string usernameField;
         
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string vchSitioField;
+        
         [global::System.ComponentModel.BrowsableAttribute(false)]
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
             get {
@@ -65,6 +68,19 @@ namespace Fuji.Configuraciones.Feed2Service {
             }
         }
         
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string vchSitio {
+            get {
+                return this.vchSitioField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.vchSitioField, value) != true)) {
+                    this.vchSitioField = value;
+                    this.RaisePropertyChanged("vchSitio");
+                }
+            }
+        }
+        
         public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
         
         protected void RaisePropertyChanged(string propertyName) {
@@ -93,6 +109,9 @@ namespace Fuji.Configuraciones.Feed2Service {
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string TokenField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string vchMensajeField;
         
         [global::System.ComponentModel.BrowsableAttribute(false)]
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
@@ -143,6 +162,19 @@ namespace Fuji.Configuraciones.Feed2Service {
             }
         }
         
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string vchMensaje {
+            get {
+                return this.vchMensajeField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.vchMensajeField, value) != true)) {
+                    this.vchMensajeField = value;
+                    this.RaisePropertyChanged("vchMensaje");
+                }
+            }
+        }
+        
         public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
         
         protected void RaisePropertyChanged(string propertyName) {
@@ -169,6 +201,12 @@ namespace Fuji.Configuraciones.Feed2Service {
         private bool bitActivoField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private bool bitGuardarCambiosField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private bool bitSolicitarPassField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private System.DateTime datFechaField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
@@ -185,6 +223,9 @@ namespace Fuji.Configuraciones.Feed2Service {
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string vchApellidoField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string vchCorreoField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string vchNombreField;
@@ -236,6 +277,32 @@ namespace Fuji.Configuraciones.Feed2Service {
                 if ((this.bitActivoField.Equals(value) != true)) {
                     this.bitActivoField = value;
                     this.RaisePropertyChanged("bitActivo");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public bool bitGuardarCambios {
+            get {
+                return this.bitGuardarCambiosField;
+            }
+            set {
+                if ((this.bitGuardarCambiosField.Equals(value) != true)) {
+                    this.bitGuardarCambiosField = value;
+                    this.RaisePropertyChanged("bitGuardarCambios");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public bool bitSolicitarPass {
+            get {
+                return this.bitSolicitarPassField;
+            }
+            set {
+                if ((this.bitSolicitarPassField.Equals(value) != true)) {
+                    this.bitSolicitarPassField = value;
+                    this.RaisePropertyChanged("bitSolicitarPass");
                 }
             }
         }
@@ -314,6 +381,19 @@ namespace Fuji.Configuraciones.Feed2Service {
                 if ((object.ReferenceEquals(this.vchApellidoField, value) != true)) {
                     this.vchApellidoField = value;
                     this.RaisePropertyChanged("vchApellido");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string vchCorreo {
+            get {
+                return this.vchCorreoField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.vchCorreoField, value) != true)) {
+                    this.vchCorreoField = value;
+                    this.RaisePropertyChanged("vchCorreo");
                 }
             }
         }
@@ -438,6 +518,9 @@ namespace Fuji.Configuraciones.Feed2Service {
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private Fuji.Configuraciones.Feed2Service.tbl_DET_ServicioSitio[] tbl_DET_ServicioSitioField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private Fuji.Configuraciones.Feed2Service.tbl_DET_Sitio[] tbl_DET_SitioField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private Fuji.Configuraciones.Feed2Service.tbl_MST_Estudio[] tbl_MST_EstudioField;
@@ -588,6 +671,19 @@ namespace Fuji.Configuraciones.Feed2Service {
                 if ((object.ReferenceEquals(this.tbl_DET_ServicioSitioField, value) != true)) {
                     this.tbl_DET_ServicioSitioField = value;
                     this.RaisePropertyChanged("tbl_DET_ServicioSitio");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public Fuji.Configuraciones.Feed2Service.tbl_DET_Sitio[] tbl_DET_Sitio {
+            get {
+                return this.tbl_DET_SitioField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.tbl_DET_SitioField, value) != true)) {
+                    this.tbl_DET_SitioField = value;
+                    this.RaisePropertyChanged("tbl_DET_Sitio");
                 }
             }
         }
@@ -784,6 +880,9 @@ namespace Fuji.Configuraciones.Feed2Service {
         private System.Nullable<bool> bitActivoField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<bool> bitSolicitarPassField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private System.Nullable<System.DateTime> datFechaField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
@@ -809,6 +908,9 @@ namespace Fuji.Configuraciones.Feed2Service {
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string vchApellidoField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string vchCorreoField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string vchNombreField;
@@ -841,6 +943,19 @@ namespace Fuji.Configuraciones.Feed2Service {
                 if ((this.bitActivoField.Equals(value) != true)) {
                     this.bitActivoField = value;
                     this.RaisePropertyChanged("bitActivo");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<bool> bitSolicitarPass {
+            get {
+                return this.bitSolicitarPassField;
+            }
+            set {
+                if ((this.bitSolicitarPassField.Equals(value) != true)) {
+                    this.bitSolicitarPassField = value;
+                    this.RaisePropertyChanged("bitSolicitarPass");
                 }
             }
         }
@@ -958,6 +1073,19 @@ namespace Fuji.Configuraciones.Feed2Service {
                 if ((object.ReferenceEquals(this.vchApellidoField, value) != true)) {
                     this.vchApellidoField = value;
                     this.RaisePropertyChanged("vchApellido");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string vchCorreo {
+            get {
+                return this.vchCorreoField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.vchCorreoField, value) != true)) {
+                    this.vchCorreoField = value;
+                    this.RaisePropertyChanged("vchCorreo");
                 }
             }
         }
@@ -1436,6 +1564,195 @@ namespace Fuji.Configuraciones.Feed2Service {
                 if ((object.ReferenceEquals(this.tbl_ConfigSitioField, value) != true)) {
                     this.tbl_ConfigSitioField = value;
                     this.RaisePropertyChanged("tbl_ConfigSitio");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="tbl_DET_Sitio", Namespace="http://schemas.datacontract.org/2004/07/_2.FUJI.Napoleon.AccesoDatos.DataAccess")]
+    [System.SerializableAttribute()]
+    public partial class tbl_DET_Sitio : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<bool> bitActivoField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<System.DateTime> datFechaField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<int> id_SitioField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int intDETSitioIDField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<int> intPuertoSCPField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private Fuji.Configuraciones.Feed2Service.tbl_ConfigSitio tbl_ConfigSitioField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string vchAETitleSCPField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string vchAETitleSCUField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string vchUserAdminField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string vchVNAIPField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<bool> bitActivo {
+            get {
+                return this.bitActivoField;
+            }
+            set {
+                if ((this.bitActivoField.Equals(value) != true)) {
+                    this.bitActivoField = value;
+                    this.RaisePropertyChanged("bitActivo");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<System.DateTime> datFecha {
+            get {
+                return this.datFechaField;
+            }
+            set {
+                if ((this.datFechaField.Equals(value) != true)) {
+                    this.datFechaField = value;
+                    this.RaisePropertyChanged("datFecha");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<int> id_Sitio {
+            get {
+                return this.id_SitioField;
+            }
+            set {
+                if ((this.id_SitioField.Equals(value) != true)) {
+                    this.id_SitioField = value;
+                    this.RaisePropertyChanged("id_Sitio");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int intDETSitioID {
+            get {
+                return this.intDETSitioIDField;
+            }
+            set {
+                if ((this.intDETSitioIDField.Equals(value) != true)) {
+                    this.intDETSitioIDField = value;
+                    this.RaisePropertyChanged("intDETSitioID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<int> intPuertoSCP {
+            get {
+                return this.intPuertoSCPField;
+            }
+            set {
+                if ((this.intPuertoSCPField.Equals(value) != true)) {
+                    this.intPuertoSCPField = value;
+                    this.RaisePropertyChanged("intPuertoSCP");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public Fuji.Configuraciones.Feed2Service.tbl_ConfigSitio tbl_ConfigSitio {
+            get {
+                return this.tbl_ConfigSitioField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.tbl_ConfigSitioField, value) != true)) {
+                    this.tbl_ConfigSitioField = value;
+                    this.RaisePropertyChanged("tbl_ConfigSitio");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string vchAETitleSCP {
+            get {
+                return this.vchAETitleSCPField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.vchAETitleSCPField, value) != true)) {
+                    this.vchAETitleSCPField = value;
+                    this.RaisePropertyChanged("vchAETitleSCP");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string vchAETitleSCU {
+            get {
+                return this.vchAETitleSCUField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.vchAETitleSCUField, value) != true)) {
+                    this.vchAETitleSCUField = value;
+                    this.RaisePropertyChanged("vchAETitleSCU");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string vchUserAdmin {
+            get {
+                return this.vchUserAdminField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.vchUserAdminField, value) != true)) {
+                    this.vchUserAdminField = value;
+                    this.RaisePropertyChanged("vchUserAdmin");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string vchVNAIP {
+            get {
+                return this.vchVNAIPField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.vchVNAIPField, value) != true)) {
+                    this.vchVNAIPField = value;
+                    this.RaisePropertyChanged("vchVNAIP");
                 }
             }
         }
@@ -2655,6 +2972,9 @@ namespace Fuji.Configuraciones.Feed2Service {
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<bool> bitFileCompleteField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private System.Nullable<System.DateTime> datFechaField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
@@ -2685,6 +3005,9 @@ namespace Fuji.Configuraciones.Feed2Service {
         private string vchPathFileField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string vchPathServidorField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string vchStudyInstanceUIDField;
         
         [global::System.ComponentModel.BrowsableAttribute(false)]
@@ -2694,6 +3017,19 @@ namespace Fuji.Configuraciones.Feed2Service {
             }
             set {
                 this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<bool> bitFileComplete {
+            get {
+                return this.bitFileCompleteField;
+            }
+            set {
+                if ((this.bitFileCompleteField.Equals(value) != true)) {
+                    this.bitFileCompleteField = value;
+                    this.RaisePropertyChanged("bitFileComplete");
+                }
             }
         }
         
@@ -2823,6 +3159,19 @@ namespace Fuji.Configuraciones.Feed2Service {
                 if ((object.ReferenceEquals(this.vchPathFileField, value) != true)) {
                     this.vchPathFileField = value;
                     this.RaisePropertyChanged("vchPathFile");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string vchPathServidor {
+            get {
+                return this.vchPathServidorField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.vchPathServidorField, value) != true)) {
+                    this.vchPathServidorField = value;
+                    this.RaisePropertyChanged("vchPathServidor");
                 }
             }
         }
@@ -3332,6 +3681,12 @@ namespace Fuji.Configuraciones.Feed2Service {
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string TokenField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string intUsuarioIDField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private Fuji.Configuraciones.Feed2Service.clsConfigSitio[] lstSitesField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
@@ -3343,6 +3698,12 @@ namespace Fuji.Configuraciones.Feed2Service {
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string mensajeField;
         
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string vchPasswordField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string vchUsuarioField;
+        
         [global::System.ComponentModel.BrowsableAttribute(false)]
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
             get {
@@ -3350,6 +3711,32 @@ namespace Fuji.Configuraciones.Feed2Service {
             }
             set {
                 this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Token {
+            get {
+                return this.TokenField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.TokenField, value) != true)) {
+                    this.TokenField = value;
+                    this.RaisePropertyChanged("Token");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string intUsuarioID {
+            get {
+                return this.intUsuarioIDField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.intUsuarioIDField, value) != true)) {
+                    this.intUsuarioIDField = value;
+                    this.RaisePropertyChanged("intUsuarioID");
+                }
             }
         }
         
@@ -3401,6 +3788,32 @@ namespace Fuji.Configuraciones.Feed2Service {
                 if ((object.ReferenceEquals(this.mensajeField, value) != true)) {
                     this.mensajeField = value;
                     this.RaisePropertyChanged("mensaje");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string vchPassword {
+            get {
+                return this.vchPasswordField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.vchPasswordField, value) != true)) {
+                    this.vchPasswordField = value;
+                    this.RaisePropertyChanged("vchPassword");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string vchUsuario {
+            get {
+                return this.vchUsuarioField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.vchUsuarioField, value) != true)) {
+                    this.vchUsuarioField = value;
+                    this.RaisePropertyChanged("vchUsuario");
                 }
             }
         }
@@ -4350,6 +4763,399 @@ namespace Fuji.Configuraciones.Feed2Service {
                 if ((object.ReferenceEquals(this.vchusuarioSolField, value) != true)) {
                     this.vchusuarioSolField = value;
                     this.RaisePropertyChanged("vchusuarioSol");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="UserRequest", Namespace="http://schemas.datacontract.org/2004/07/_3.FUJI.Napoleon.Site.Services.DataContra" +
+        "cts")]
+    [System.SerializableAttribute()]
+    public partial class UserRequest : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string TokenField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string intUsuarioIDField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string mensajeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private Fuji.Configuraciones.Feed2Service.clsUsuario userField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private Fuji.Configuraciones.Feed2Service.tbl_CAT_Usuarios usuarioField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string vchPasswordField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string vchUsuarioField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Token {
+            get {
+                return this.TokenField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.TokenField, value) != true)) {
+                    this.TokenField = value;
+                    this.RaisePropertyChanged("Token");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string intUsuarioID {
+            get {
+                return this.intUsuarioIDField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.intUsuarioIDField, value) != true)) {
+                    this.intUsuarioIDField = value;
+                    this.RaisePropertyChanged("intUsuarioID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string mensaje {
+            get {
+                return this.mensajeField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.mensajeField, value) != true)) {
+                    this.mensajeField = value;
+                    this.RaisePropertyChanged("mensaje");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public Fuji.Configuraciones.Feed2Service.clsUsuario user {
+            get {
+                return this.userField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.userField, value) != true)) {
+                    this.userField = value;
+                    this.RaisePropertyChanged("user");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public Fuji.Configuraciones.Feed2Service.tbl_CAT_Usuarios usuario {
+            get {
+                return this.usuarioField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.usuarioField, value) != true)) {
+                    this.usuarioField = value;
+                    this.RaisePropertyChanged("usuario");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string vchPassword {
+            get {
+                return this.vchPasswordField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.vchPasswordField, value) != true)) {
+                    this.vchPasswordField = value;
+                    this.RaisePropertyChanged("vchPassword");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string vchUsuario {
+            get {
+                return this.vchUsuarioField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.vchUsuarioField, value) != true)) {
+                    this.vchUsuarioField = value;
+                    this.RaisePropertyChanged("vchUsuario");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="FileFeed2Request", Namespace="http://schemas.datacontract.org/2004/07/_3.FUJI.Napoleon.Site.Services.DataContra" +
+        "cts")]
+    [System.SerializableAttribute()]
+    public partial class FileFeed2Request : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string TokenField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private Fuji.Configuraciones.Feed2Service.tbl_CAT_Feed2Version fileField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string intUsuarioIDField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string vchPasswordField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string vchUsuarioField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Token {
+            get {
+                return this.TokenField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.TokenField, value) != true)) {
+                    this.TokenField = value;
+                    this.RaisePropertyChanged("Token");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public Fuji.Configuraciones.Feed2Service.tbl_CAT_Feed2Version file {
+            get {
+                return this.fileField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.fileField, value) != true)) {
+                    this.fileField = value;
+                    this.RaisePropertyChanged("file");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string intUsuarioID {
+            get {
+                return this.intUsuarioIDField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.intUsuarioIDField, value) != true)) {
+                    this.intUsuarioIDField = value;
+                    this.RaisePropertyChanged("intUsuarioID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string vchPassword {
+            get {
+                return this.vchPasswordField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.vchPasswordField, value) != true)) {
+                    this.vchPasswordField = value;
+                    this.RaisePropertyChanged("vchPassword");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string vchUsuario {
+            get {
+                return this.vchUsuarioField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.vchUsuarioField, value) != true)) {
+                    this.vchUsuarioField = value;
+                    this.RaisePropertyChanged("vchUsuario");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="tbl_CAT_Feed2Version", Namespace="http://schemas.datacontract.org/2004/07/_2.FUJI.Napoleon.AccesoDatos.DataAccess")]
+    [System.SerializableAttribute()]
+    public partial class tbl_CAT_Feed2Version : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<bool> bitActivoField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<System.DateTime> datFechaField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int intVersionIDField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private byte[] vbdataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string vchComentarioField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string vchNombreArchivoField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string vchVersionField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<bool> bitActivo {
+            get {
+                return this.bitActivoField;
+            }
+            set {
+                if ((this.bitActivoField.Equals(value) != true)) {
+                    this.bitActivoField = value;
+                    this.RaisePropertyChanged("bitActivo");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<System.DateTime> datFecha {
+            get {
+                return this.datFechaField;
+            }
+            set {
+                if ((this.datFechaField.Equals(value) != true)) {
+                    this.datFechaField = value;
+                    this.RaisePropertyChanged("datFecha");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int intVersionID {
+            get {
+                return this.intVersionIDField;
+            }
+            set {
+                if ((this.intVersionIDField.Equals(value) != true)) {
+                    this.intVersionIDField = value;
+                    this.RaisePropertyChanged("intVersionID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public byte[] vbdata {
+            get {
+                return this.vbdataField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.vbdataField, value) != true)) {
+                    this.vbdataField = value;
+                    this.RaisePropertyChanged("vbdata");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string vchComentario {
+            get {
+                return this.vchComentarioField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.vchComentarioField, value) != true)) {
+                    this.vchComentarioField = value;
+                    this.RaisePropertyChanged("vchComentario");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string vchNombreArchivo {
+            get {
+                return this.vchNombreArchivoField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.vchNombreArchivoField, value) != true)) {
+                    this.vchNombreArchivoField = value;
+                    this.RaisePropertyChanged("vchNombreArchivo");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string vchVersion {
+            get {
+                return this.vchVersionField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.vchVersionField, value) != true)) {
+                    this.vchVersionField = value;
+                    this.RaisePropertyChanged("vchVersion");
                 }
             }
         }
@@ -5671,6 +6477,9 @@ namespace Fuji.Configuraciones.Feed2Service {
         private string vchPasswordField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string vchPathServerField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string vchUsuarioField;
         
         [global::System.ComponentModel.BrowsableAttribute(false)]
@@ -5809,6 +6618,19 @@ namespace Fuji.Configuraciones.Feed2Service {
                 if ((object.ReferenceEquals(this.vchPasswordField, value) != true)) {
                     this.vchPasswordField = value;
                     this.RaisePropertyChanged("vchPassword");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string vchPathServer {
+            get {
+                return this.vchPathServerField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.vchPathServerField, value) != true)) {
+                    this.vchPathServerField = value;
+                    this.RaisePropertyChanged("vchPathServer");
                 }
             }
         }
@@ -6295,6 +7117,12 @@ namespace Fuji.Configuraciones.Feed2Service {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/INapoleonService/getSitios", ReplyAction="http://tempuri.org/INapoleonService/getSitiosResponse")]
         System.Threading.Tasks.Task<Fuji.Configuraciones.Feed2Service.tbl_ConfigSitio[]> getSitiosAsync(int intProyectoID, int id_Sitio);
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/INapoleonService/getDetalleSitio", ReplyAction="http://tempuri.org/INapoleonService/getDetalleSitioResponse")]
+        Fuji.Configuraciones.Feed2Service.tbl_DET_Sitio getDetalleSitio(int id_Sitio);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/INapoleonService/getDetalleSitio", ReplyAction="http://tempuri.org/INapoleonService/getDetalleSitioResponse")]
+        System.Threading.Tasks.Task<Fuji.Configuraciones.Feed2Service.tbl_DET_Sitio> getDetalleSitioAsync(int id_Sitio);
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/INapoleonService/getProyectos", ReplyAction="http://tempuri.org/INapoleonService/getProyectosResponse")]
         Fuji.Configuraciones.Feed2Service.tbl_CAT_Proyecto[] getProyectos();
         
@@ -6331,6 +7159,12 @@ namespace Fuji.Configuraciones.Feed2Service {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/INapoleonService/updateEstatusSitio", ReplyAction="http://tempuri.org/INapoleonService/updateEstatusSitioResponse")]
         System.Threading.Tasks.Task<Fuji.Configuraciones.Feed2Service.clsMensaje> updateEstatusSitioAsync(int id_Sitio, bool activo);
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/INapoleonService/updateEstatusFiles", ReplyAction="http://tempuri.org/INapoleonService/updateEstatusFilesResponse")]
+        Fuji.Configuraciones.Feed2Service.clsMensaje updateEstatusFiles(int intVersionID, bool activo);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/INapoleonService/updateEstatusFiles", ReplyAction="http://tempuri.org/INapoleonService/updateEstatusFilesResponse")]
+        System.Threading.Tasks.Task<Fuji.Configuraciones.Feed2Service.clsMensaje> updateEstatusFilesAsync(int intVersionID, bool activo);
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/INapoleonService/updateEstatusProyectos", ReplyAction="http://tempuri.org/INapoleonService/updateEstatusProyectosResponse")]
         Fuji.Configuraciones.Feed2Service.clsMensaje updateEstatusProyectos(int intProyectoID, bool activo);
         
@@ -6338,22 +7172,52 @@ namespace Fuji.Configuraciones.Feed2Service {
         System.Threading.Tasks.Task<Fuji.Configuraciones.Feed2Service.clsMensaje> updateEstatusProyectosAsync(int intProyectoID, bool activo);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/INapoleonService/updateEstatusUsuario", ReplyAction="http://tempuri.org/INapoleonService/updateEstatusUsuarioResponse")]
-        Fuji.Configuraciones.Feed2Service.clsMensaje updateEstatusUsuario(int intUsuarioID, bool activo);
+        Fuji.Configuraciones.Feed2Service.clsMensaje updateEstatusUsuario(Fuji.Configuraciones.Feed2Service.UserRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/INapoleonService/updateEstatusUsuario", ReplyAction="http://tempuri.org/INapoleonService/updateEstatusUsuarioResponse")]
-        System.Threading.Tasks.Task<Fuji.Configuraciones.Feed2Service.clsMensaje> updateEstatusUsuarioAsync(int intUsuarioID, bool activo);
+        System.Threading.Tasks.Task<Fuji.Configuraciones.Feed2Service.clsMensaje> updateEstatusUsuarioAsync(Fuji.Configuraciones.Feed2Service.UserRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/INapoleonService/setUsuario", ReplyAction="http://tempuri.org/INapoleonService/setUsuarioResponse")]
-        Fuji.Configuraciones.Feed2Service.clsMensaje setUsuario(Fuji.Configuraciones.Feed2Service.tbl_CAT_Usuarios user);
+        Fuji.Configuraciones.Feed2Service.clsMensaje setUsuario(Fuji.Configuraciones.Feed2Service.UserRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/INapoleonService/setUsuario", ReplyAction="http://tempuri.org/INapoleonService/setUsuarioResponse")]
-        System.Threading.Tasks.Task<Fuji.Configuraciones.Feed2Service.clsMensaje> setUsuarioAsync(Fuji.Configuraciones.Feed2Service.tbl_CAT_Usuarios user);
+        System.Threading.Tasks.Task<Fuji.Configuraciones.Feed2Service.clsMensaje> setUsuarioAsync(Fuji.Configuraciones.Feed2Service.UserRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/INapoleonService/updateUsuario", ReplyAction="http://tempuri.org/INapoleonService/updateUsuarioResponse")]
-        Fuji.Configuraciones.Feed2Service.clsMensaje updateUsuario(Fuji.Configuraciones.Feed2Service.tbl_CAT_Usuarios user);
+        Fuji.Configuraciones.Feed2Service.clsMensaje updateUsuario(Fuji.Configuraciones.Feed2Service.UserRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/INapoleonService/updateUsuario", ReplyAction="http://tempuri.org/INapoleonService/updateUsuarioResponse")]
-        System.Threading.Tasks.Task<Fuji.Configuraciones.Feed2Service.clsMensaje> updateUsuarioAsync(Fuji.Configuraciones.Feed2Service.tbl_CAT_Usuarios user);
+        System.Threading.Tasks.Task<Fuji.Configuraciones.Feed2Service.clsMensaje> updateUsuarioAsync(Fuji.Configuraciones.Feed2Service.UserRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/INapoleonService/updatePassword", ReplyAction="http://tempuri.org/INapoleonService/updatePasswordResponse")]
+        Fuji.Configuraciones.Feed2Service.clsMensaje updatePassword(int intUsuarioID, string vchPassword, bool SolRe);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/INapoleonService/updatePassword", ReplyAction="http://tempuri.org/INapoleonService/updatePasswordResponse")]
+        System.Threading.Tasks.Task<Fuji.Configuraciones.Feed2Service.clsMensaje> updatePasswordAsync(int intUsuarioID, string vchPassword, bool SolRe);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/INapoleonService/getNewPassword", ReplyAction="http://tempuri.org/INapoleonService/getNewPasswordResponse")]
+        Fuji.Configuraciones.Feed2Service.LoginResponse getNewPassword(string vchCorreo);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/INapoleonService/getNewPassword", ReplyAction="http://tempuri.org/INapoleonService/getNewPasswordResponse")]
+        System.Threading.Tasks.Task<Fuji.Configuraciones.Feed2Service.LoginResponse> getNewPasswordAsync(string vchCorreo);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/INapoleonService/setActualizaUser", ReplyAction="http://tempuri.org/INapoleonService/setActualizaUserResponse")]
+        Fuji.Configuraciones.Feed2Service.clsMensaje setActualizaUser(Fuji.Configuraciones.Feed2Service.UserRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/INapoleonService/setActualizaUser", ReplyAction="http://tempuri.org/INapoleonService/setActualizaUserResponse")]
+        System.Threading.Tasks.Task<Fuji.Configuraciones.Feed2Service.clsMensaje> setActualizaUserAsync(Fuji.Configuraciones.Feed2Service.UserRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/INapoleonService/setFileVersion", ReplyAction="http://tempuri.org/INapoleonService/setFileVersionResponse")]
+        Fuji.Configuraciones.Feed2Service.clsMensaje setFileVersion(Fuji.Configuraciones.Feed2Service.FileFeed2Request request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/INapoleonService/setFileVersion", ReplyAction="http://tempuri.org/INapoleonService/setFileVersionResponse")]
+        System.Threading.Tasks.Task<Fuji.Configuraciones.Feed2Service.clsMensaje> setFileVersionAsync(Fuji.Configuraciones.Feed2Service.FileFeed2Request request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/INapoleonService/getListaArchivos", ReplyAction="http://tempuri.org/INapoleonService/getListaArchivosResponse")]
+        Fuji.Configuraciones.Feed2Service.tbl_CAT_Feed2Version[] getListaArchivos();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/INapoleonService/getListaArchivos", ReplyAction="http://tempuri.org/INapoleonService/getListaArchivosResponse")]
+        System.Threading.Tasks.Task<Fuji.Configuraciones.Feed2Service.tbl_CAT_Feed2Version[]> getListaArchivosAsync();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/INapoleonService/getServicioSitio", ReplyAction="http://tempuri.org/INapoleonService/getServicioSitioResponse")]
         Fuji.Configuraciones.Feed2Service.clsDashboardService[] getServicioSitio(int intProyectoID, int id_Sitio);
@@ -6374,10 +7238,10 @@ namespace Fuji.Configuraciones.Feed2Service {
         System.Threading.Tasks.Task<Fuji.Configuraciones.Feed2Service.clsMensaje> setSitioAsync(Fuji.Configuraciones.Feed2Service.tbl_ConfigSitio mdlSitio, Fuji.Configuraciones.Feed2Service.tbl_RegistroSitio mdlRegistro);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/INapoleonService/getListEstudios", ReplyAction="http://tempuri.org/INapoleonService/getListEstudiosResponse")]
-        Fuji.Configuraciones.Feed2Service.clsMensaje getListEstudios(int intEstatusID, int id_Sitio, int intModalidadID);
+        Fuji.Configuraciones.Feed2Service.clsMensaje getListEstudios(int intEstatusID, int id_Sitio, int intModalidadID, int intProyectoID);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/INapoleonService/getListEstudios", ReplyAction="http://tempuri.org/INapoleonService/getListEstudiosResponse")]
-        System.Threading.Tasks.Task<Fuji.Configuraciones.Feed2Service.clsMensaje> getListEstudiosAsync(int intEstatusID, int id_Sitio, int intModalidadID);
+        System.Threading.Tasks.Task<Fuji.Configuraciones.Feed2Service.clsMensaje> getListEstudiosAsync(int intEstatusID, int id_Sitio, int intModalidadID, int intProyectoID);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/INapoleonService/getCatalogo", ReplyAction="http://tempuri.org/INapoleonService/getCatalogoResponse")]
         Fuji.Configuraciones.Feed2Service.clsModeloCatalogo[] getCatalogo(string _TipoCat, int intProyecto, int id_Sitio);
@@ -6422,28 +7286,28 @@ namespace Fuji.Configuraciones.Feed2Service {
         System.Threading.Tasks.Task<Fuji.Configuraciones.Feed2Service.clsMensaje> setPrioridadesSucModAsync(Fuji.Configuraciones.Feed2Service.PrioridadSucModRequest Request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/INapoleonService/getDatosTabla", ReplyAction="http://tempuri.org/INapoleonService/getDatosTablaResponse")]
-        Fuji.Configuraciones.Feed2Service.clsEntidadTabla[] getDatosTabla(System.DateTime FechaIncio, System.DateTime FechaFin, int sucOID);
+        Fuji.Configuraciones.Feed2Service.clsEntidadTabla[] getDatosTabla(System.DateTime FechaIncio, System.DateTime FechaFin, int sucOID, int intProyectoID);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/INapoleonService/getDatosTabla", ReplyAction="http://tempuri.org/INapoleonService/getDatosTablaResponse")]
-        System.Threading.Tasks.Task<Fuji.Configuraciones.Feed2Service.clsEntidadTabla[]> getDatosTablaAsync(System.DateTime FechaIncio, System.DateTime FechaFin, int sucOID);
+        System.Threading.Tasks.Task<Fuji.Configuraciones.Feed2Service.clsEntidadTabla[]> getDatosTablaAsync(System.DateTime FechaIncio, System.DateTime FechaFin, int sucOID, int intProyectoID);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/INapoleonService/getDatosGraficas", ReplyAction="http://tempuri.org/INapoleonService/getDatosGraficasResponse")]
-        Fuji.Configuraciones.Feed2Service.clsGrafica[] getDatosGraficas(string tipo, System.DateTime FechaIncio, System.DateTime FechaFin, int sucOID);
+        Fuji.Configuraciones.Feed2Service.clsGrafica[] getDatosGraficas(string tipo, System.DateTime FechaIncio, System.DateTime FechaFin, int sucOID, int intProyectoID);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/INapoleonService/getDatosGraficas", ReplyAction="http://tempuri.org/INapoleonService/getDatosGraficasResponse")]
-        System.Threading.Tasks.Task<Fuji.Configuraciones.Feed2Service.clsGrafica[]> getDatosGraficasAsync(string tipo, System.DateTime FechaIncio, System.DateTime FechaFin, int sucOID);
+        System.Threading.Tasks.Task<Fuji.Configuraciones.Feed2Service.clsGrafica[]> getDatosGraficasAsync(string tipo, System.DateTime FechaIncio, System.DateTime FechaFin, int sucOID, int intProyectoID);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/INapoleonService/getDatosTop", ReplyAction="http://tempuri.org/INapoleonService/getDatosTopResponse")]
-        Fuji.Configuraciones.Feed2Service.clsTop getDatosTop(System.DateTime fini, System.DateTime ffin, int sucOID);
+        Fuji.Configuraciones.Feed2Service.clsTop getDatosTop(System.DateTime fini, System.DateTime ffin, int sucOID, int intProyectoID);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/INapoleonService/getDatosTop", ReplyAction="http://tempuri.org/INapoleonService/getDatosTopResponse")]
-        System.Threading.Tasks.Task<Fuji.Configuraciones.Feed2Service.clsTop> getDatosTopAsync(System.DateTime fini, System.DateTime ffin, int sucOID);
+        System.Threading.Tasks.Task<Fuji.Configuraciones.Feed2Service.clsTop> getDatosTopAsync(System.DateTime fini, System.DateTime ffin, int sucOID, int intProyectoID);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/INapoleonService/getPromedioEnvio", ReplyAction="http://tempuri.org/INapoleonService/getPromedioEnvioResponse")]
-        string getPromedioEnvio(System.DateTime FechaIncio, System.DateTime FechaFin, int sucOID);
+        string getPromedioEnvio(System.DateTime FechaIncio, System.DateTime FechaFin, int sucOID, int intProyectoID);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/INapoleonService/getPromedioEnvio", ReplyAction="http://tempuri.org/INapoleonService/getPromedioEnvioResponse")]
-        System.Threading.Tasks.Task<string> getPromedioEnvioAsync(System.DateTime FechaIncio, System.DateTime FechaFin, int sucOID);
+        System.Threading.Tasks.Task<string> getPromedioEnvioAsync(System.DateTime FechaIncio, System.DateTime FechaFin, int sucOID, int intProyectoID);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/INapoleonService/getConeccion", ReplyAction="http://tempuri.org/INapoleonService/getConeccionResponse")]
         Fuji.Configuraciones.Feed2Service.ClienteF2CResponse getConeccion(Fuji.Configuraciones.Feed2Service.ClienteF2CRequest request);
@@ -6468,6 +7332,24 @@ namespace Fuji.Configuraciones.Feed2Service {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/INapoleonService/getEstudiosEnviar", ReplyAction="http://tempuri.org/INapoleonService/getEstudiosEnviarResponse")]
         System.Threading.Tasks.Task<Fuji.Configuraciones.Feed2Service.ClienteF2CResponse> getEstudiosEnviarAsync(Fuji.Configuraciones.Feed2Service.ClienteF2CRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/INapoleonService/getEstudiosEnviarServer", ReplyAction="http://tempuri.org/INapoleonService/getEstudiosEnviarServerResponse")]
+        Fuji.Configuraciones.Feed2Service.ClienteF2CResponse getEstudiosEnviarServer(Fuji.Configuraciones.Feed2Service.ClienteF2CRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/INapoleonService/getEstudiosEnviarServer", ReplyAction="http://tempuri.org/INapoleonService/getEstudiosEnviarServerResponse")]
+        System.Threading.Tasks.Task<Fuji.Configuraciones.Feed2Service.ClienteF2CResponse> getEstudiosEnviarServerAsync(Fuji.Configuraciones.Feed2Service.ClienteF2CRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/INapoleonService/getEstudiosTransmitir", ReplyAction="http://tempuri.org/INapoleonService/getEstudiosTransmitirResponse")]
+        Fuji.Configuraciones.Feed2Service.ClienteF2CResponse getEstudiosTransmitir(Fuji.Configuraciones.Feed2Service.ClienteF2CRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/INapoleonService/getEstudiosTransmitir", ReplyAction="http://tempuri.org/INapoleonService/getEstudiosTransmitirResponse")]
+        System.Threading.Tasks.Task<Fuji.Configuraciones.Feed2Service.ClienteF2CResponse> getEstudiosTransmitirAsync(Fuji.Configuraciones.Feed2Service.ClienteF2CRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/INapoleonService/updateEstatusTransmitir", ReplyAction="http://tempuri.org/INapoleonService/updateEstatusTransmitirResponse")]
+        Fuji.Configuraciones.Feed2Service.ClienteF2CResponse updateEstatusTransmitir(Fuji.Configuraciones.Feed2Service.ClienteF2CRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/INapoleonService/updateEstatusTransmitir", ReplyAction="http://tempuri.org/INapoleonService/updateEstatusTransmitirResponse")]
+        System.Threading.Tasks.Task<Fuji.Configuraciones.Feed2Service.ClienteF2CResponse> updateEstatusTransmitirAsync(Fuji.Configuraciones.Feed2Service.ClienteF2CRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/INapoleonService/updateEstatus", ReplyAction="http://tempuri.org/INapoleonService/updateEstatusResponse")]
         Fuji.Configuraciones.Feed2Service.ClienteF2CResponse updateEstatus(Fuji.Configuraciones.Feed2Service.ClienteF2CRequest request);
@@ -6504,6 +7386,12 @@ namespace Fuji.Configuraciones.Feed2Service {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/INapoleonService/getXMLFileConfig", ReplyAction="http://tempuri.org/INapoleonService/getXMLFileConfigResponse")]
         System.Threading.Tasks.Task<Fuji.Configuraciones.Feed2Service.ClienteF2CResponse> getXMLFileConfigAsync(Fuji.Configuraciones.Feed2Service.ClienteF2CRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/INapoleonService/getPingServer", ReplyAction="http://tempuri.org/INapoleonService/getPingServerResponse")]
+        bool getPingServer();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/INapoleonService/getPingServer", ReplyAction="http://tempuri.org/INapoleonService/getPingServerResponse")]
+        System.Threading.Tasks.Task<bool> getPingServerAsync();
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -6547,6 +7435,14 @@ namespace Fuji.Configuraciones.Feed2Service {
         
         public System.Threading.Tasks.Task<Fuji.Configuraciones.Feed2Service.tbl_ConfigSitio[]> getSitiosAsync(int intProyectoID, int id_Sitio) {
             return base.Channel.getSitiosAsync(intProyectoID, id_Sitio);
+        }
+        
+        public Fuji.Configuraciones.Feed2Service.tbl_DET_Sitio getDetalleSitio(int id_Sitio) {
+            return base.Channel.getDetalleSitio(id_Sitio);
+        }
+        
+        public System.Threading.Tasks.Task<Fuji.Configuraciones.Feed2Service.tbl_DET_Sitio> getDetalleSitioAsync(int id_Sitio) {
+            return base.Channel.getDetalleSitioAsync(id_Sitio);
         }
         
         public Fuji.Configuraciones.Feed2Service.tbl_CAT_Proyecto[] getProyectos() {
@@ -6597,6 +7493,14 @@ namespace Fuji.Configuraciones.Feed2Service {
             return base.Channel.updateEstatusSitioAsync(id_Sitio, activo);
         }
         
+        public Fuji.Configuraciones.Feed2Service.clsMensaje updateEstatusFiles(int intVersionID, bool activo) {
+            return base.Channel.updateEstatusFiles(intVersionID, activo);
+        }
+        
+        public System.Threading.Tasks.Task<Fuji.Configuraciones.Feed2Service.clsMensaje> updateEstatusFilesAsync(int intVersionID, bool activo) {
+            return base.Channel.updateEstatusFilesAsync(intVersionID, activo);
+        }
+        
         public Fuji.Configuraciones.Feed2Service.clsMensaje updateEstatusProyectos(int intProyectoID, bool activo) {
             return base.Channel.updateEstatusProyectos(intProyectoID, activo);
         }
@@ -6605,28 +7509,68 @@ namespace Fuji.Configuraciones.Feed2Service {
             return base.Channel.updateEstatusProyectosAsync(intProyectoID, activo);
         }
         
-        public Fuji.Configuraciones.Feed2Service.clsMensaje updateEstatusUsuario(int intUsuarioID, bool activo) {
-            return base.Channel.updateEstatusUsuario(intUsuarioID, activo);
+        public Fuji.Configuraciones.Feed2Service.clsMensaje updateEstatusUsuario(Fuji.Configuraciones.Feed2Service.UserRequest request) {
+            return base.Channel.updateEstatusUsuario(request);
         }
         
-        public System.Threading.Tasks.Task<Fuji.Configuraciones.Feed2Service.clsMensaje> updateEstatusUsuarioAsync(int intUsuarioID, bool activo) {
-            return base.Channel.updateEstatusUsuarioAsync(intUsuarioID, activo);
+        public System.Threading.Tasks.Task<Fuji.Configuraciones.Feed2Service.clsMensaje> updateEstatusUsuarioAsync(Fuji.Configuraciones.Feed2Service.UserRequest request) {
+            return base.Channel.updateEstatusUsuarioAsync(request);
         }
         
-        public Fuji.Configuraciones.Feed2Service.clsMensaje setUsuario(Fuji.Configuraciones.Feed2Service.tbl_CAT_Usuarios user) {
-            return base.Channel.setUsuario(user);
+        public Fuji.Configuraciones.Feed2Service.clsMensaje setUsuario(Fuji.Configuraciones.Feed2Service.UserRequest request) {
+            return base.Channel.setUsuario(request);
         }
         
-        public System.Threading.Tasks.Task<Fuji.Configuraciones.Feed2Service.clsMensaje> setUsuarioAsync(Fuji.Configuraciones.Feed2Service.tbl_CAT_Usuarios user) {
-            return base.Channel.setUsuarioAsync(user);
+        public System.Threading.Tasks.Task<Fuji.Configuraciones.Feed2Service.clsMensaje> setUsuarioAsync(Fuji.Configuraciones.Feed2Service.UserRequest request) {
+            return base.Channel.setUsuarioAsync(request);
         }
         
-        public Fuji.Configuraciones.Feed2Service.clsMensaje updateUsuario(Fuji.Configuraciones.Feed2Service.tbl_CAT_Usuarios user) {
-            return base.Channel.updateUsuario(user);
+        public Fuji.Configuraciones.Feed2Service.clsMensaje updateUsuario(Fuji.Configuraciones.Feed2Service.UserRequest request) {
+            return base.Channel.updateUsuario(request);
         }
         
-        public System.Threading.Tasks.Task<Fuji.Configuraciones.Feed2Service.clsMensaje> updateUsuarioAsync(Fuji.Configuraciones.Feed2Service.tbl_CAT_Usuarios user) {
-            return base.Channel.updateUsuarioAsync(user);
+        public System.Threading.Tasks.Task<Fuji.Configuraciones.Feed2Service.clsMensaje> updateUsuarioAsync(Fuji.Configuraciones.Feed2Service.UserRequest request) {
+            return base.Channel.updateUsuarioAsync(request);
+        }
+        
+        public Fuji.Configuraciones.Feed2Service.clsMensaje updatePassword(int intUsuarioID, string vchPassword, bool SolRe) {
+            return base.Channel.updatePassword(intUsuarioID, vchPassword, SolRe);
+        }
+        
+        public System.Threading.Tasks.Task<Fuji.Configuraciones.Feed2Service.clsMensaje> updatePasswordAsync(int intUsuarioID, string vchPassword, bool SolRe) {
+            return base.Channel.updatePasswordAsync(intUsuarioID, vchPassword, SolRe);
+        }
+        
+        public Fuji.Configuraciones.Feed2Service.LoginResponse getNewPassword(string vchCorreo) {
+            return base.Channel.getNewPassword(vchCorreo);
+        }
+        
+        public System.Threading.Tasks.Task<Fuji.Configuraciones.Feed2Service.LoginResponse> getNewPasswordAsync(string vchCorreo) {
+            return base.Channel.getNewPasswordAsync(vchCorreo);
+        }
+        
+        public Fuji.Configuraciones.Feed2Service.clsMensaje setActualizaUser(Fuji.Configuraciones.Feed2Service.UserRequest request) {
+            return base.Channel.setActualizaUser(request);
+        }
+        
+        public System.Threading.Tasks.Task<Fuji.Configuraciones.Feed2Service.clsMensaje> setActualizaUserAsync(Fuji.Configuraciones.Feed2Service.UserRequest request) {
+            return base.Channel.setActualizaUserAsync(request);
+        }
+        
+        public Fuji.Configuraciones.Feed2Service.clsMensaje setFileVersion(Fuji.Configuraciones.Feed2Service.FileFeed2Request request) {
+            return base.Channel.setFileVersion(request);
+        }
+        
+        public System.Threading.Tasks.Task<Fuji.Configuraciones.Feed2Service.clsMensaje> setFileVersionAsync(Fuji.Configuraciones.Feed2Service.FileFeed2Request request) {
+            return base.Channel.setFileVersionAsync(request);
+        }
+        
+        public Fuji.Configuraciones.Feed2Service.tbl_CAT_Feed2Version[] getListaArchivos() {
+            return base.Channel.getListaArchivos();
+        }
+        
+        public System.Threading.Tasks.Task<Fuji.Configuraciones.Feed2Service.tbl_CAT_Feed2Version[]> getListaArchivosAsync() {
+            return base.Channel.getListaArchivosAsync();
         }
         
         public Fuji.Configuraciones.Feed2Service.clsDashboardService[] getServicioSitio(int intProyectoID, int id_Sitio) {
@@ -6653,12 +7597,12 @@ namespace Fuji.Configuraciones.Feed2Service {
             return base.Channel.setSitioAsync(mdlSitio, mdlRegistro);
         }
         
-        public Fuji.Configuraciones.Feed2Service.clsMensaje getListEstudios(int intEstatusID, int id_Sitio, int intModalidadID) {
-            return base.Channel.getListEstudios(intEstatusID, id_Sitio, intModalidadID);
+        public Fuji.Configuraciones.Feed2Service.clsMensaje getListEstudios(int intEstatusID, int id_Sitio, int intModalidadID, int intProyectoID) {
+            return base.Channel.getListEstudios(intEstatusID, id_Sitio, intModalidadID, intProyectoID);
         }
         
-        public System.Threading.Tasks.Task<Fuji.Configuraciones.Feed2Service.clsMensaje> getListEstudiosAsync(int intEstatusID, int id_Sitio, int intModalidadID) {
-            return base.Channel.getListEstudiosAsync(intEstatusID, id_Sitio, intModalidadID);
+        public System.Threading.Tasks.Task<Fuji.Configuraciones.Feed2Service.clsMensaje> getListEstudiosAsync(int intEstatusID, int id_Sitio, int intModalidadID, int intProyectoID) {
+            return base.Channel.getListEstudiosAsync(intEstatusID, id_Sitio, intModalidadID, intProyectoID);
         }
         
         public Fuji.Configuraciones.Feed2Service.clsModeloCatalogo[] getCatalogo(string _TipoCat, int intProyecto, int id_Sitio) {
@@ -6717,36 +7661,36 @@ namespace Fuji.Configuraciones.Feed2Service {
             return base.Channel.setPrioridadesSucModAsync(Request);
         }
         
-        public Fuji.Configuraciones.Feed2Service.clsEntidadTabla[] getDatosTabla(System.DateTime FechaIncio, System.DateTime FechaFin, int sucOID) {
-            return base.Channel.getDatosTabla(FechaIncio, FechaFin, sucOID);
+        public Fuji.Configuraciones.Feed2Service.clsEntidadTabla[] getDatosTabla(System.DateTime FechaIncio, System.DateTime FechaFin, int sucOID, int intProyectoID) {
+            return base.Channel.getDatosTabla(FechaIncio, FechaFin, sucOID, intProyectoID);
         }
         
-        public System.Threading.Tasks.Task<Fuji.Configuraciones.Feed2Service.clsEntidadTabla[]> getDatosTablaAsync(System.DateTime FechaIncio, System.DateTime FechaFin, int sucOID) {
-            return base.Channel.getDatosTablaAsync(FechaIncio, FechaFin, sucOID);
+        public System.Threading.Tasks.Task<Fuji.Configuraciones.Feed2Service.clsEntidadTabla[]> getDatosTablaAsync(System.DateTime FechaIncio, System.DateTime FechaFin, int sucOID, int intProyectoID) {
+            return base.Channel.getDatosTablaAsync(FechaIncio, FechaFin, sucOID, intProyectoID);
         }
         
-        public Fuji.Configuraciones.Feed2Service.clsGrafica[] getDatosGraficas(string tipo, System.DateTime FechaIncio, System.DateTime FechaFin, int sucOID) {
-            return base.Channel.getDatosGraficas(tipo, FechaIncio, FechaFin, sucOID);
+        public Fuji.Configuraciones.Feed2Service.clsGrafica[] getDatosGraficas(string tipo, System.DateTime FechaIncio, System.DateTime FechaFin, int sucOID, int intProyectoID) {
+            return base.Channel.getDatosGraficas(tipo, FechaIncio, FechaFin, sucOID, intProyectoID);
         }
         
-        public System.Threading.Tasks.Task<Fuji.Configuraciones.Feed2Service.clsGrafica[]> getDatosGraficasAsync(string tipo, System.DateTime FechaIncio, System.DateTime FechaFin, int sucOID) {
-            return base.Channel.getDatosGraficasAsync(tipo, FechaIncio, FechaFin, sucOID);
+        public System.Threading.Tasks.Task<Fuji.Configuraciones.Feed2Service.clsGrafica[]> getDatosGraficasAsync(string tipo, System.DateTime FechaIncio, System.DateTime FechaFin, int sucOID, int intProyectoID) {
+            return base.Channel.getDatosGraficasAsync(tipo, FechaIncio, FechaFin, sucOID, intProyectoID);
         }
         
-        public Fuji.Configuraciones.Feed2Service.clsTop getDatosTop(System.DateTime fini, System.DateTime ffin, int sucOID) {
-            return base.Channel.getDatosTop(fini, ffin, sucOID);
+        public Fuji.Configuraciones.Feed2Service.clsTop getDatosTop(System.DateTime fini, System.DateTime ffin, int sucOID, int intProyectoID) {
+            return base.Channel.getDatosTop(fini, ffin, sucOID, intProyectoID);
         }
         
-        public System.Threading.Tasks.Task<Fuji.Configuraciones.Feed2Service.clsTop> getDatosTopAsync(System.DateTime fini, System.DateTime ffin, int sucOID) {
-            return base.Channel.getDatosTopAsync(fini, ffin, sucOID);
+        public System.Threading.Tasks.Task<Fuji.Configuraciones.Feed2Service.clsTop> getDatosTopAsync(System.DateTime fini, System.DateTime ffin, int sucOID, int intProyectoID) {
+            return base.Channel.getDatosTopAsync(fini, ffin, sucOID, intProyectoID);
         }
         
-        public string getPromedioEnvio(System.DateTime FechaIncio, System.DateTime FechaFin, int sucOID) {
-            return base.Channel.getPromedioEnvio(FechaIncio, FechaFin, sucOID);
+        public string getPromedioEnvio(System.DateTime FechaIncio, System.DateTime FechaFin, int sucOID, int intProyectoID) {
+            return base.Channel.getPromedioEnvio(FechaIncio, FechaFin, sucOID, intProyectoID);
         }
         
-        public System.Threading.Tasks.Task<string> getPromedioEnvioAsync(System.DateTime FechaIncio, System.DateTime FechaFin, int sucOID) {
-            return base.Channel.getPromedioEnvioAsync(FechaIncio, FechaFin, sucOID);
+        public System.Threading.Tasks.Task<string> getPromedioEnvioAsync(System.DateTime FechaIncio, System.DateTime FechaFin, int sucOID, int intProyectoID) {
+            return base.Channel.getPromedioEnvioAsync(FechaIncio, FechaFin, sucOID, intProyectoID);
         }
         
         public Fuji.Configuraciones.Feed2Service.ClienteF2CResponse getConeccion(Fuji.Configuraciones.Feed2Service.ClienteF2CRequest request) {
@@ -6779,6 +7723,30 @@ namespace Fuji.Configuraciones.Feed2Service {
         
         public System.Threading.Tasks.Task<Fuji.Configuraciones.Feed2Service.ClienteF2CResponse> getEstudiosEnviarAsync(Fuji.Configuraciones.Feed2Service.ClienteF2CRequest request) {
             return base.Channel.getEstudiosEnviarAsync(request);
+        }
+        
+        public Fuji.Configuraciones.Feed2Service.ClienteF2CResponse getEstudiosEnviarServer(Fuji.Configuraciones.Feed2Service.ClienteF2CRequest request) {
+            return base.Channel.getEstudiosEnviarServer(request);
+        }
+        
+        public System.Threading.Tasks.Task<Fuji.Configuraciones.Feed2Service.ClienteF2CResponse> getEstudiosEnviarServerAsync(Fuji.Configuraciones.Feed2Service.ClienteF2CRequest request) {
+            return base.Channel.getEstudiosEnviarServerAsync(request);
+        }
+        
+        public Fuji.Configuraciones.Feed2Service.ClienteF2CResponse getEstudiosTransmitir(Fuji.Configuraciones.Feed2Service.ClienteF2CRequest request) {
+            return base.Channel.getEstudiosTransmitir(request);
+        }
+        
+        public System.Threading.Tasks.Task<Fuji.Configuraciones.Feed2Service.ClienteF2CResponse> getEstudiosTransmitirAsync(Fuji.Configuraciones.Feed2Service.ClienteF2CRequest request) {
+            return base.Channel.getEstudiosTransmitirAsync(request);
+        }
+        
+        public Fuji.Configuraciones.Feed2Service.ClienteF2CResponse updateEstatusTransmitir(Fuji.Configuraciones.Feed2Service.ClienteF2CRequest request) {
+            return base.Channel.updateEstatusTransmitir(request);
+        }
+        
+        public System.Threading.Tasks.Task<Fuji.Configuraciones.Feed2Service.ClienteF2CResponse> updateEstatusTransmitirAsync(Fuji.Configuraciones.Feed2Service.ClienteF2CRequest request) {
+            return base.Channel.updateEstatusTransmitirAsync(request);
         }
         
         public Fuji.Configuraciones.Feed2Service.ClienteF2CResponse updateEstatus(Fuji.Configuraciones.Feed2Service.ClienteF2CRequest request) {
@@ -6827,6 +7795,14 @@ namespace Fuji.Configuraciones.Feed2Service {
         
         public System.Threading.Tasks.Task<Fuji.Configuraciones.Feed2Service.ClienteF2CResponse> getXMLFileConfigAsync(Fuji.Configuraciones.Feed2Service.ClienteF2CRequest request) {
             return base.Channel.getXMLFileConfigAsync(request);
+        }
+        
+        public bool getPingServer() {
+            return base.Channel.getPingServer();
+        }
+        
+        public System.Threading.Tasks.Task<bool> getPingServerAsync() {
+            return base.Channel.getPingServerAsync();
         }
     }
 }

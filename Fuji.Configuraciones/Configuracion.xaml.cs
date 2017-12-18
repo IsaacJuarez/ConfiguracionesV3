@@ -32,7 +32,7 @@ namespace Fuji.Configuraciones
         //public tbl_ConfigSitio mdlSitio = new tbl_ConfigSitio();
         //public static List<tbl_ConfigSitio> lstSitios = new List<tbl_ConfigSitio>();
         private ConfiguracionDataAccess ConfigDA;
-        //private LoginDataAccess LoginDA;
+        private LoginDataAccess LoginDA;
         public static string vchUsuarioMaster = "";
         public static string userID = "";
         public static string vchuserID = "";
@@ -73,11 +73,11 @@ namespace Fuji.Configuraciones
                     vchuserID = vchUsuarioLog;
                     txtUserActive.Text = "Usuario: " + vchuserID;
                     txtSitioActive.Text = "Sitio: " + vchClaveSitio;
-                    txtIPS1.Text = "201";
-                    txtIPS2.Text = "149";
-                    txtIPS3.Text = "27";
-                    txtIPS4.Text = "38";
-                    txtPuertoServer.Text = "104";
+                    //txtIPS1.Text = "201";
+                    //txtIPS2.Text = "149";
+                    //txtIPS3.Text = "27";
+                    //txtIPS4.Text = "38";
+                    //txtPuertoServer.Text = "104";
                     intTipoUser = _tipeUser;
                     userID = vchuserID;
                     ArrayList nicNames = WMIHelper.GetNICNames();
@@ -193,7 +193,7 @@ namespace Fuji.Configuraciones
                                     fillSitiodb(response2.ConfigSitio);
                                     createFileXML(id_Sitio_Global, vchClaveSitio);
                                     setCliente();
-                                    setServer();
+                                    //setServer();
                                     string mesagge = "";
                                     DataAccessLocal.tbl_ConfigSitioAUX mdlComplete = new DataAccessLocal.tbl_ConfigSitioAUX();
                                     mdlComplete = obtenerSitioComplete(response2.ConfigSitio);
@@ -212,6 +212,7 @@ namespace Fuji.Configuraciones
                     }
                 }
                 //enableServer();
+                makeping();
             }
             catch (Exception ePL)
             {
@@ -229,12 +230,12 @@ namespace Fuji.Configuraciones
                 mdl.bitActivo = true;
                 mdl.datFechaSistema = DateTime.Now;
                 mdl.intPuertoCliente = mdlC.intPuertoCliente > 0 ? mdlC.intPuertoCliente : Convert.ToInt32(txtPuertoCliente.ToString());
-                mdl.in_tPuertoServer = mdlC.intPuertoServer > 0 ? mdlC.intPuertoServer : Convert.ToInt32(txtPuertoServer.ToString());
+                //mdl.in_tPuertoServer = mdlC.intPuertoServer > 0 ? mdlC.intPuertoServer : Convert.ToInt32(txtPuertoServer.ToString());
                 mdl.vchAETitle = mdlC.vchAETitle != "" ? mdlC.vchAETitle : txtAET.Text.ToString();
-                mdl.vchAETitleServer = mdlC.vchAETitleServer != "" ? mdlC.vchAETitleServer : txtAETitleServer.Text.ToString();
+                //mdl.vchAETitleServer = mdlC.vchAETitleServer != "" ? mdlC.vchAETitleServer : txtAETitleServer.Text.ToString();
                 mdl.vchClaveSitio = mdlC.vchClaveSitio != "" ? mdlC.vchClaveSitio : txtClaveSitio.Text.ToString();
                 mdl.vchIPCliente = mdlC.vchIPCliente != "" ? mdlC.vchIPCliente : (txtIPC1.Text.ToString() + "." + txtIPC2.Text.ToString() + "." + txtIPC3.Text.ToString() + "." + txtIPC4.Text.ToString());
-                mdl.vchIPServidor = mdlC.vchIPServidor != "" ? mdlC.vchIPServidor : (txtIPS1.Text.ToString() + "." + txtIPS2.Text.ToString() + "." + txtIPS3.Text.ToString() + "." + txtIPS4.Text.ToString());
+                //mdl.vchIPServidor = mdlC.vchIPServidor != "" ? mdlC.vchIPServidor : (txtIPS1.Text.ToString() + "." + txtIPS2.Text.ToString() + "." + txtIPS3.Text.ToString() + "." + txtIPS4.Text.ToString());
                 mdl.vchMaskCliente = mdlC.vchMaskCliente != "" ? mdlC.vchMaskCliente : (txtMaskC1.Text.ToString() + "." + txtMaskC2.Text.ToString() + "." + txtMaskC3.Text.ToString() + "." + txtMaskC4.Text.ToString());
                 mdl.vchnombreSitio = mdlC.vchNombreSitio != "" ? mdlC.vchNombreSitio : txtNombreSitio.Text.ToString();
                 mdl.vchPathLocal = mdlC.vchPathLocal != "" ? mdlC.vchPathLocal : txtFolder.Text.ToString();
@@ -271,32 +272,32 @@ namespace Fuji.Configuraciones
             }
         }
 
-        private void enableServer()
-        {
-            try
-            {
-                if (id_Sitio_Global > 0)
-                {
-                    txtIPS1.IsEnabled = true;
-                    txtIPS2.IsEnabled = true;
-                    txtIPS3.IsEnabled = true;
-                    txtIPS4.IsEnabled = true;
-                    txtPuertoServer.IsEnabled = true;
-                }
-                else
-                {
-                    txtIPS1.IsEnabled = false;
-                    txtIPS2.IsEnabled = false;
-                    txtIPS3.IsEnabled = false;
-                    txtIPS4.IsEnabled = false;
-                    txtPuertoServer.IsEnabled = false;
-                }
-            }
-            catch (Exception eeS)
-            {
-                MessageBox.Show("Error al verificar el sitio: " + eeS.Message, "Error");
-            }
-        }
+        //private void enableServer()
+        //{
+        //    try
+        //    {
+        //        if (id_Sitio_Global > 0)
+        //        {
+        //            txtIPS1.IsEnabled = true;
+        //            txtIPS2.IsEnabled = true;
+        //            txtIPS3.IsEnabled = true;
+        //            txtIPS4.IsEnabled = true;
+        //            txtPuertoServer.IsEnabled = true;
+        //        }
+        //        else
+        //        {
+        //            txtIPS1.IsEnabled = false;
+        //            txtIPS2.IsEnabled = false;
+        //            txtIPS3.IsEnabled = false;
+        //            txtIPS4.IsEnabled = false;
+        //            txtPuertoServer.IsEnabled = false;
+        //        }
+        //    }
+        //    catch (Exception eeS)
+        //    {
+        //        MessageBox.Show("Error al verificar el sitio: " + eeS.Message, "Error");
+        //    }
+        //}
 
         private void fillSitio(Entidades.clsConfiguracion mdlSitio)
         {
@@ -324,18 +325,18 @@ namespace Fuji.Configuraciones
                     }
                 }
 
-                if (mdlSitio.vchIPServidor != null && mdlSitio.vchIPServidor != "")
-                {
-                    string[] ipformatoS = mdlSitio.vchIPServidor.Split('.');
-                    if (ipformatoS.Count() > 0)
-                    {
-                        txtIPS1.Text = ipformatoS[0];
-                        txtIPS2.Text = ipformatoS[1];
-                        txtIPS3.Text = ipformatoS[2];
-                        txtIPS4.Text = ipformatoS[3];
-                    }
-                    makeping(mdlSitio.vchIPServidor);
-                }
+                //if (mdlSitio.vchIPServidor != null && mdlSitio.vchIPServidor != "")
+                //{
+                //    string[] ipformatoS = mdlSitio.vchIPServidor.Split('.');
+                //    if (ipformatoS.Count() > 0)
+                //    {
+                //        txtIPS1.Text = ipformatoS[0];
+                //        txtIPS2.Text = ipformatoS[1];
+                //        txtIPS3.Text = ipformatoS[2];
+                //        txtIPS4.Text = ipformatoS[3];
+                //    }
+                //    makeping(mdlSitio.vchIPServidor);
+                //}
                 if (mdlSitio.vchMaskCliente != null && mdlSitio.vchMaskCliente != "")
                 {
                     string[] maskformato = mdlSitio.vchMaskCliente.Split('.');
@@ -350,8 +351,8 @@ namespace Fuji.Configuraciones
 
                 txtNombreSitio.Text = mdlSitio.vchNombreSitio;
                 txtPuertoCliente.Text = mdlSitio.intPuertoCliente.ToString();
-                txtPuertoServer.Text = mdlSitio.intPuertoServer > 0 ? mdlSitio.intPuertoServer.ToString() : "";
-                txtAETitleServer.Text = mdlSitio.vchAETitleServer.ToString();
+                //txtPuertoServer.Text = mdlSitio.intPuertoServer > 0 ? mdlSitio.intPuertoServer.ToString() : "";
+                //txtAETitleServer.Text = mdlSitio.vchAETitleServer.ToString();
                 txtFolder.Text = mdlSitio.vchPathLocal;
             }
             catch (Exception efS)
@@ -400,33 +401,33 @@ namespace Fuji.Configuraciones
                     }
                 }
 
-                if (mdlSitio.vchIPServidor != null && mdlSitio.vchIPServidor != "")
-                {
-                    string[] ipformatoS = mdlSitio.vchIPServidor.Split('.');
-                    if (ipformatoS.Count() > 0)
-                    {
-                        txtIPS1.Text = ipformatoS[0];
-                        txtIPS2.Text = ipformatoS[1];
-                        txtIPS3.Text = ipformatoS[2];
-                        txtIPS4.Text = ipformatoS[3];
-                    }
-                    makeping(mdlSitio.vchIPServidor);
-                }
-                else
-                {
-                    if (IPServer != "")
-                    {
-                        string[] ipformatoS = IPServer.Split('.');
-                        if (ipformatoS.Count() > 0)
-                        {
-                            txtIPS1.Text = ipformatoS[0];
-                            txtIPS2.Text = ipformatoS[1];
-                            txtIPS3.Text = ipformatoS[2];
-                            txtIPS4.Text = ipformatoS[3];
-                        }
-                        makeping(IPServer);
-                    }
-                }
+                //if (mdlSitio.vchIPServidor != null && mdlSitio.vchIPServidor != "")
+                //{
+                //    string[] ipformatoS = mdlSitio.vchIPServidor.Split('.');
+                //    if (ipformatoS.Count() > 0)
+                //    {
+                //        txtIPS1.Text = ipformatoS[0];
+                //        txtIPS2.Text = ipformatoS[1];
+                //        txtIPS3.Text = ipformatoS[2];
+                //        txtIPS4.Text = ipformatoS[3];
+                //    }
+                //    makeping(mdlSitio.vchIPServidor);
+                //}
+                //else
+                //{
+                //    if (IPServer != "")
+                //    {
+                //        string[] ipformatoS = IPServer.Split('.');
+                //        if (ipformatoS.Count() > 0)
+                //        {
+                //            txtIPS1.Text = ipformatoS[0];
+                //            txtIPS2.Text = ipformatoS[1];
+                //            txtIPS3.Text = ipformatoS[2];
+                //            txtIPS4.Text = ipformatoS[3];
+                //        }
+                //        makeping(IPServer);
+                //    }
+                //}
                 if (mdlSitio.vchMaskCliente != null && mdlSitio.vchMaskCliente != "")
                 {
                     string[] maskformato = mdlSitio.vchMaskCliente.Split('.');
@@ -455,8 +456,8 @@ namespace Fuji.Configuraciones
 
                 txtNombreSitio.Text = mdlSitio.vchNombreSitio;
                 txtPuertoCliente.Text = mdlSitio.intPuertoCliente > 0 ? mdlSitio.intPuertoCliente.ToString() : (PuertoCliente != "" ? PuertoCliente : "");
-                txtPuertoServer.Text = mdlSitio.intPuertoServer > 0 ? mdlSitio.intPuertoServer.ToString() : (PuertoServer != "" ? PuertoServer : "");
-                txtAETitleServer.Text = AETitleServer;
+                //txtPuertoServer.Text = mdlSitio.intPuertoServer > 0 ? mdlSitio.intPuertoServer.ToString() : (PuertoServer != "" ? PuertoServer : "");
+                //txtAETitleServer.Text = AETitleServer;
                 txtAET.Text = mdlSitio.vchAETitle;
                 txtFolder.Text = ConfigRepository;
             }
@@ -466,11 +467,12 @@ namespace Fuji.Configuraciones
             }
         }
 
-        private void makeping(string vchIPServidor)
+        private void makeping()
         {
             try
             {
-                bool success = Log.PingHost(vchIPServidor);
+                LoginDA = new LoginDataAccess();
+                bool success = LoginDA.getValidacionServer();
                 if (success)
                 {
                     imgActive.Source = new BitmapImage(new Uri(@"assets/online.png", UriKind.RelativeOrAbsolute));
@@ -498,10 +500,10 @@ namespace Fuji.Configuraciones
                 txtIPC3.IsEnabled = _activar;
                 txtIPC4.IsEnabled = _activar;
 
-                txtIPS1.IsEnabled = _activar;
-                txtIPS2.IsEnabled = _activar;
-                txtIPS3.IsEnabled = _activar;
-                txtIPS4.IsEnabled = _activar;
+                //txtIPS1.IsEnabled = _activar;
+                //txtIPS2.IsEnabled = _activar;
+                //txtIPS3.IsEnabled = _activar;
+                //txtIPS4.IsEnabled = _activar;
 
                 txtMaskC1.IsEnabled = _activar;
                 txtMaskC2.IsEnabled = _activar;
@@ -510,9 +512,9 @@ namespace Fuji.Configuraciones
 
                 txtNombreSitio.IsEnabled = _activar;
                 txtPuertoCliente.IsEnabled = _activar;
-                txtPuertoServer.IsEnabled = _activar;
+                //txtPuertoServer.IsEnabled = _activar;
                 btnSaveCliente.IsEnabled = _activar;
-                btnSaveServer.IsEnabled = _activar;
+                //btnSaveServer.IsEnabled = _activar;
             }
             catch (Exception eEC)
             {
@@ -526,6 +528,7 @@ namespace Fuji.Configuraciones
             {
                 using (new WaitCursor())
                 {
+                    makeping();
                     setCliente();
                 }
             }
@@ -775,133 +778,133 @@ namespace Fuji.Configuraciones
             return valido;
         }
 
-        private void btnSaveServer_Click(object sender, RoutedEventArgs e)
-        {
-            try
-            {
-                using (new WaitCursor())
-                {
-                    setServer();
-                }
-            }
-            catch (Exception eSC)
-            {
-                MessageBox.Show("Existe un error, favor de verificar: " + eSC.Message);
-            }
-        }
+        //private void btnSaveServer_Click(object sender, RoutedEventArgs e)
+        //{
+        //    try
+        //    {
+        //        using (new WaitCursor())
+        //        {
+        //            setServer();
+        //        }
+        //    }
+        //    catch (Exception eSC)
+        //    {
+        //        MessageBox.Show("Existe un error, favor de verificar: " + eSC.Message);
+        //    }
+        //}
 
-        private void setServer()
-        {
-            try
-            {
-                if (validaServer())
-                {
-                    Feed2Service.clsConfiguracion mdlServer = new Feed2Service.clsConfiguracion();
-                    if (vchClaveSitioGlobal != "")
-                    {
-                        mdlServer = obtenerServer();
-                        bool success = false;
-                        string mensaje = "";
-                        ConfigDA = new ConfiguracionDataAccess();
-                        ClienteF2CResponse response = new ClienteF2CResponse();
-                        response = ConfigDA.updateConfiguracionServer(mdlServer,ref mensaje);
-                        if(!response.valido)
-                        {
-                            Log.EscribeLog("No  se pudo almacenar la configuración para el servidor del sitio: " + mdlServer.vchClaveSitio + " , error:" + mensaje);
-                        }
-                        success = XMLConfigurator.setConfiguracionServerXML(mdlServer, ref mensaje);
-                        if (success)
-                        {
-                            //enableServer();
-                            makeping(mdlServer.vchIPServidor);
-                            cambiosServer = false;
-                            if(!mensajesInicial)
-                            {
-                                MessageBox.Show("Cambios correctos.", "Feed2Cloud");
-                            }
-                            else
-                            {
-                                MessageBox.Show("Se cargó correctamente la configuración inicial.", "Feed2Cloud");
-                                mensajesInicial = false;
-                            }
-                        }
-                        else
-                        {
-                            MessageBox.Show(mensaje, "Error");
-                        }
-                    }
-                    else
-                    {
-                        MessageBox.Show("Se requiere capturar los datos del sitio.", "Advertencia");
-                    }
-                }
-            }
-            catch(Exception ess)
-            {
-                MessageBox.Show("Existe un error en setServer: " + ess.Message);
-            }
-        }
+        //private void setServer()
+        //{
+        //    try
+        //    {
+        //        if (validaServer())
+        //        {
+        //            Feed2Service.clsConfiguracion mdlServer = new Feed2Service.clsConfiguracion();
+        //            if (vchClaveSitioGlobal != "")
+        //            {
+        //                mdlServer = obtenerServer();
+        //                bool success = false;
+        //                string mensaje = "";
+        //                ConfigDA = new ConfiguracionDataAccess();
+        //                ClienteF2CResponse response = new ClienteF2CResponse();
+        //                response = ConfigDA.updateConfiguracionServer(mdlServer,ref mensaje);
+        //                if(!response.valido)
+        //                {
+        //                    Log.EscribeLog("No  se pudo almacenar la configuración para el servidor del sitio: " + mdlServer.vchClaveSitio + " , error:" + mensaje);
+        //                }
+        //                success = XMLConfigurator.setConfiguracionServerXML(mdlServer, ref mensaje);
+        //                if (success)
+        //                {
+        //                    //enableServer();
+        //                    makeping(mdlServer.vchIPServidor);
+        //                    cambiosServer = false;
+        //                    if(!mensajesInicial)
+        //                    {
+        //                        MessageBox.Show("Cambios correctos.", "Feed2Cloud");
+        //                    }
+        //                    else
+        //                    {
+        //                        MessageBox.Show("Se cargó correctamente la configuración inicial.", "Feed2Cloud");
+        //                        mensajesInicial = false;
+        //                    }
+        //                }
+        //                else
+        //                {
+        //                    MessageBox.Show(mensaje, "Error");
+        //                }
+        //            }
+        //            else
+        //            {
+        //                MessageBox.Show("Se requiere capturar los datos del sitio.", "Advertencia");
+        //            }
+        //        }
+        //    }
+        //    catch(Exception ess)
+        //    {
+        //        MessageBox.Show("Existe un error en setServer: " + ess.Message);
+        //    }
+        //}
 
-        private Feed2Service.clsConfiguracion obtenerServer()
-        {
-            Feed2Service.clsConfiguracion mdl = new Feed2Service.clsConfiguracion();
-            try
-            {
-                mdl.id_Sitio = id_Sitio_Global;
-                string ipServer = "";
-                ipServer = txtIPS1.Text == "" ? "" : txtIPS1.Text + ".";
-                ipServer = ipServer + (txtIPS2.Text == "" ? "" : txtIPS2.Text + ".");
-                ipServer = ipServer + (txtIPS3.Text == "" ? "" : txtIPS3.Text + ".");
-                ipServer = ipServer + (txtIPS4.Text == "" ? "" : txtIPS4.Text);
-                mdl.vchIPServidor = ipServer;
-                mdl.intPuertoServer = Convert.ToInt32(txtPuertoServer.Text);
-                mdl.vchAETitleServer = txtAETitleServer.Text;
-                mdl.vchClaveSitio = vchClaveSitioGlobal;
-            }
-            catch (Exception eoS)
-            {
-                Log.EscribeLog("Error al obtener datos de Servidor: " + eoS.Message);
-            }
-            return mdl;
-        }
+        //private Feed2Service.clsConfiguracion obtenerServer()
+        //{
+        //    Feed2Service.clsConfiguracion mdl = new Feed2Service.clsConfiguracion();
+        //    try
+        //    {
+        //        mdl.id_Sitio = id_Sitio_Global;
+        //        string ipServer = "";
+        //        ipServer = txtIPS1.Text == "" ? "" : txtIPS1.Text + ".";
+        //        ipServer = ipServer + (txtIPS2.Text == "" ? "" : txtIPS2.Text + ".");
+        //        ipServer = ipServer + (txtIPS3.Text == "" ? "" : txtIPS3.Text + ".");
+        //        ipServer = ipServer + (txtIPS4.Text == "" ? "" : txtIPS4.Text);
+        //        mdl.vchIPServidor = ipServer;
+        //        mdl.intPuertoServer = Convert.ToInt32(txtPuertoServer.Text);
+        //        mdl.vchAETitleServer = txtAETitleServer.Text;
+        //        mdl.vchClaveSitio = vchClaveSitioGlobal;
+        //    }
+        //    catch (Exception eoS)
+        //    {
+        //        Log.EscribeLog("Error al obtener datos de Servidor: " + eoS.Message);
+        //    }
+        //    return mdl;
+        //}
 
-        private bool validaServer()
-        {
-            bool validaServer = true;
-            try
-            {
-                string ipServidor = "";
-                ipServidor = txtIPS1.Text == "" ? "" : txtIPS1.Text + ".";
-                if (ipServidor != "")
-                {
-                    ipServidor = ipServidor + (txtIPS2.Text == "" ? "" : txtIPS2.Text + ".");
-                    if (ipServidor != "")
-                    {
-                        ipServidor = ipServidor + (txtIPS3.Text == "" ? "" : txtIPS3.Text + ".");
-                        if (ipServidor != "")
-                        {
-                            ipServidor = ipServidor + (txtIPS4.Text == "" ? "" : txtIPS4.Text);
-                        }
-                    }
-                }
-                if (ipServidor.Trim() == "" || !validaFormatoIP(ipServidor.Trim()))
-                {
-                    MessageBox.Show("Capturar una IP para el Server. Revisar el formato de red.", "Advertencia");
-                    return false;
-                }
-                if (txtPuertoServer.Text.Trim() == "" || Convert.ToInt32(txtPuertoServer.Text) > 99999)
-                {
-                    MessageBox.Show("Capturar un puerto para el Server. Menor de 99999.", "Advertencia:");
-                    return false;
-                }
-            }
-            catch (Exception eVS)
-            {
-                MessageBox.Show("Existe un error al validar la configuración del server" + eVS.Message, "Error.");
-                validaServer = false;
-            }
-            return validaServer;
-        }
+        //private bool validaServer()
+        //{
+        //    bool validaServer = true;
+        //    try
+        //    {
+        //        string ipServidor = "";
+        //        ipServidor = txtIPS1.Text == "" ? "" : txtIPS1.Text + ".";
+        //        if (ipServidor != "")
+        //        {
+        //            ipServidor = ipServidor + (txtIPS2.Text == "" ? "" : txtIPS2.Text + ".");
+        //            if (ipServidor != "")
+        //            {
+        //                ipServidor = ipServidor + (txtIPS3.Text == "" ? "" : txtIPS3.Text + ".");
+        //                if (ipServidor != "")
+        //                {
+        //                    ipServidor = ipServidor + (txtIPS4.Text == "" ? "" : txtIPS4.Text);
+        //                }
+        //            }
+        //        }
+        //        if (ipServidor.Trim() == "" || !validaFormatoIP(ipServidor.Trim()))
+        //        {
+        //            MessageBox.Show("Capturar una IP para el Server. Revisar el formato de red.", "Advertencia");
+        //            return false;
+        //        }
+        //        if (txtPuertoServer.Text.Trim() == "" || Convert.ToInt32(txtPuertoServer.Text) > 99999)
+        //        {
+        //            MessageBox.Show("Capturar un puerto para el Server. Menor de 99999.", "Advertencia:");
+        //            return false;
+        //        }
+        //    }
+        //    catch (Exception eVS)
+        //    {
+        //        MessageBox.Show("Existe un error al validar la configuración del server" + eVS.Message, "Error.");
+        //        validaServer = false;
+        //    }
+        //    return validaServer;
+        //}
 
         private void txtPuertoCliente_PreviewTextInput(object sender, TextCompositionEventArgs e)
         {
@@ -1602,160 +1605,160 @@ namespace Fuji.Configuraciones
             }
         }
 
-        private void txtIPS1_PreviewKeyDown(object sender, KeyEventArgs e)
-        {
-            try
-            {
-                if (e.Key == Key.OemPeriod)
-                {
-                    txtIPS2.Focus();
-                    focusMovedS = true;
-                }
-                else
-                {
-                    focusMovedS = true;
-                }
-            }
-            catch (Exception epc1)
-            {
-                MessageBox.Show("Existe un error al validad la primer parte de la ip: " + epc1.Message, "Error");
-            }
-        }
+        //private void txtIPS1_PreviewKeyDown(object sender, KeyEventArgs e)
+        //{
+        //    try
+        //    {
+        //        if (e.Key == Key.OemPeriod)
+        //        {
+        //            txtIPS2.Focus();
+        //            focusMovedS = true;
+        //        }
+        //        else
+        //        {
+        //            focusMovedS = true;
+        //        }
+        //    }
+        //    catch (Exception epc1)
+        //    {
+        //        MessageBox.Show("Existe un error al validad la primer parte de la ip: " + epc1.Message, "Error");
+        //    }
+        //}
 
-        private void txtIPS2_KeyDown(object sender, KeyEventArgs e)
-        {
-            try
-            {
-                if (e.Key == Key.OemPeriod && !focusMovedS)
-                {
-                    txtIPS3.Focus();
-                    focusMovedS = true;
-                }
-                else
-                {
-                    focusMovedS = false;
-                }
-            }
-            catch (Exception epc)
-            {
-                MessageBox.Show("Existe un error al validad la primer parte de la ip: " + epc.Message, "Error");
-            }
-        }
+        //private void txtIPS2_KeyDown(object sender, KeyEventArgs e)
+        //{
+        //    try
+        //    {
+        //        if (e.Key == Key.OemPeriod && !focusMovedS)
+        //        {
+        //            txtIPS3.Focus();
+        //            focusMovedS = true;
+        //        }
+        //        else
+        //        {
+        //            focusMovedS = false;
+        //        }
+        //    }
+        //    catch (Exception epc)
+        //    {
+        //        MessageBox.Show("Existe un error al validad la primer parte de la ip: " + epc.Message, "Error");
+        //    }
+        //}
 
-        private void txtIPS3_KeyDown(object sender, KeyEventArgs e)
-        {
-            try
-            {
-                if (e.Key == Key.OemPeriod)
-                {
-                    txtIPS4.Focus();
-                }
-            }
-            catch (Exception epc)
-            {
-                MessageBox.Show("Existe un error al validad la primer parte de la ip: " + epc.Message, "Error");
-            }
-        }
+        //private void txtIPS3_KeyDown(object sender, KeyEventArgs e)
+        //{
+        //    try
+        //    {
+        //        if (e.Key == Key.OemPeriod)
+        //        {
+        //            txtIPS4.Focus();
+        //        }
+        //    }
+        //    catch (Exception epc)
+        //    {
+        //        MessageBox.Show("Existe un error al validad la primer parte de la ip: " + epc.Message, "Error");
+        //    }
+        //}
 
-        private void txtIPS4_PreviewTextInput(object sender, TextCompositionEventArgs e)
-        {
-            try
-            {
-                Regex regex = new Regex("[^0-9+]");
-                e.Handled = regex.IsMatch(e.Text);
-            }
-            catch (Exception eTVP)
-            {
-                MessageBox.Show("Existe un error al validar los datos de entrada del puerto: " + eTVP.Message, "Error:");
-            }
-        }
+        //private void txtIPS4_PreviewTextInput(object sender, TextCompositionEventArgs e)
+        //{
+        //    try
+        //    {
+        //        Regex regex = new Regex("[^0-9+]");
+        //        e.Handled = regex.IsMatch(e.Text);
+        //    }
+        //    catch (Exception eTVP)
+        //    {
+        //        MessageBox.Show("Existe un error al validar los datos de entrada del puerto: " + eTVP.Message, "Error:");
+        //    }
+        //}
 
-        private void txtIPS3_PreviewTextInput(object sender, TextCompositionEventArgs e)
-        {
-            try
-            {
-                Regex regex = new Regex("[^0-9+]");
-                e.Handled = regex.IsMatch(e.Text);
-            }
-            catch (Exception eTVP)
-            {
-                MessageBox.Show("Existe un error al validar los datos de entrada del puerto: " + eTVP.Message, "Error:");
-            }
-        }
+        //private void txtIPS3_PreviewTextInput(object sender, TextCompositionEventArgs e)
+        //{
+        //    try
+        //    {
+        //        Regex regex = new Regex("[^0-9+]");
+        //        e.Handled = regex.IsMatch(e.Text);
+        //    }
+        //    catch (Exception eTVP)
+        //    {
+        //        MessageBox.Show("Existe un error al validar los datos de entrada del puerto: " + eTVP.Message, "Error:");
+        //    }
+        //}
 
-        private void txtIPS2_PreviewTextInput(object sender, TextCompositionEventArgs e)
-        {
-            try
-            {
-                Regex regex = new Regex("[^0-9+]");
-                e.Handled = regex.IsMatch(e.Text);
-            }
-            catch (Exception eTVP)
-            {
-                MessageBox.Show("Existe un error al validar los datos de entrada del puerto: " + eTVP.Message, "Error:");
-            }
-        }
+        //private void txtIPS2_PreviewTextInput(object sender, TextCompositionEventArgs e)
+        //{
+        //    try
+        //    {
+        //        Regex regex = new Regex("[^0-9+]");
+        //        e.Handled = regex.IsMatch(e.Text);
+        //    }
+        //    catch (Exception eTVP)
+        //    {
+        //        MessageBox.Show("Existe un error al validar los datos de entrada del puerto: " + eTVP.Message, "Error:");
+        //    }
+        //}
 
-        private void txtIPS1_PreviewTextInput(object sender, TextCompositionEventArgs e)
-        {
-            try
-            {
-                Regex regex = new Regex("[^0-9+]");
-                e.Handled = regex.IsMatch(e.Text);
-            }
-            catch (Exception eTVP)
-            {
-                MessageBox.Show("Existe un error al validar los datos de entrada del puerto: " + eTVP.Message, "Error:");
-            }
-        }
+        //private void txtIPS1_PreviewTextInput(object sender, TextCompositionEventArgs e)
+        //{
+        //    try
+        //    {
+        //        Regex regex = new Regex("[^0-9+]");
+        //        e.Handled = regex.IsMatch(e.Text);
+        //    }
+        //    catch (Exception eTVP)
+        //    {
+        //        MessageBox.Show("Existe un error al validar los datos de entrada del puerto: " + eTVP.Message, "Error:");
+        //    }
+        //}
 
-        private void txtIPS1_PreviewKeyUp(object sender, KeyEventArgs e)
-        {
-            try
-            {
-                TextBox txtbx = (TextBox)sender;
-                if (txtbx.Text.Length == 3)
-                {
-                    txtIPS2.Focus();
-                }
-            }
-            catch (Exception epku1)
-            {
-                MessageBox.Show("Existe un error: " + epku1.Message, "Error:");
-            }
-        }
+        //private void txtIPS1_PreviewKeyUp(object sender, KeyEventArgs e)
+        //{
+        //    try
+        //    {
+        //        TextBox txtbx = (TextBox)sender;
+        //        if (txtbx.Text.Length == 3)
+        //        {
+        //            txtIPS2.Focus();
+        //        }
+        //    }
+        //    catch (Exception epku1)
+        //    {
+        //        MessageBox.Show("Existe un error: " + epku1.Message, "Error:");
+        //    }
+        //}
 
-        private void txtIPS2_PreviewKeyUp(object sender, KeyEventArgs e)
-        {
-            try
-            {
-                TextBox txtbx = (TextBox)sender;
-                if (txtbx.Text.Length == 3)
-                {
-                    txtIPC3.Focus();
-                }
-            }
-            catch (Exception epku2)
-            {
-                MessageBox.Show("Existe un error: " + epku2.Message, "Error:");
-            }
-        }
+        //private void txtIPS2_PreviewKeyUp(object sender, KeyEventArgs e)
+        //{
+        //    try
+        //    {
+        //        TextBox txtbx = (TextBox)sender;
+        //        if (txtbx.Text.Length == 3)
+        //        {
+        //            txtIPC3.Focus();
+        //        }
+        //    }
+        //    catch (Exception epku2)
+        //    {
+        //        MessageBox.Show("Existe un error: " + epku2.Message, "Error:");
+        //    }
+        //}
 
-        private void txtIPS3_PreviewKeyUp(object sender, KeyEventArgs e)
-        {
-            try
-            {
-                TextBox txtbx = (TextBox)sender;
-                if (txtbx.Text.Length == 3)
-                {
-                    txtIPC4.Focus();
-                }
-            }
-            catch (Exception epku3)
-            {
-                MessageBox.Show("Existe un error: " + epku3.Message, "Error:");
-            }
-        }
+        //private void txtIPS3_PreviewKeyUp(object sender, KeyEventArgs e)
+        //{
+        //    try
+        //    {
+        //        TextBox txtbx = (TextBox)sender;
+        //        if (txtbx.Text.Length == 3)
+        //        {
+        //            txtIPC4.Focus();
+        //        }
+        //    }
+        //    catch (Exception epku3)
+        //    {
+        //        MessageBox.Show("Existe un error: " + epku3.Message, "Error:");
+        //    }
+        //}
 
         //private void cmbSitio_Loaded(object sender, RoutedEventArgs e)
         //{
@@ -1922,7 +1925,7 @@ namespace Fuji.Configuraciones
 
         private void MoveServive()
         {
-            string nombreServicio = "MoveFileService";
+            string nombreServicio = "MoveFilesService";
             ServiceController c = new ServiceController(nombreServicio);
             int timeoutMilisegundos = 5000;
             TimeSpan timeout = TimeSpan.FromMilliseconds(timeoutMilisegundos);
@@ -1932,29 +1935,29 @@ namespace Fuji.Configuraciones
                 {
                     c.Stop();
                     c.WaitForStatus(ServiceControllerStatus.Stopped, timeout);
-                    Log.EscribeLog("MoveFileService Detenido.");
+                    Log.EscribeLog("MoveFilesService Detenido.");
                 }
                 c.Refresh();
                 if (c != null && c.Status == ServiceControllerStatus.Paused)
                 {
                     c.Stop();
                     c.WaitForStatus(ServiceControllerStatus.Stopped, timeout);
-                    Log.EscribeLog("MoveFileService Detenido.");
+                    Log.EscribeLog("MoveFilesService Detenido.");
                     c.Start();
                     c.WaitForStatus(ServiceControllerStatus.Running, timeout);
-                    Log.EscribeLog("MoveFileService Iniciado.");
+                    Log.EscribeLog("MoveFilesService Iniciado.");
                 }
                 c.Refresh();
                 if (c != null && c.Status == ServiceControllerStatus.Stopped)
                 {
                     c.Start();
                     c.WaitForStatus(ServiceControllerStatus.Running, timeout);
-                    Log.EscribeLog("MoveFileService Iniciado.");
+                    Log.EscribeLog("MoveFilesService Iniciado.");
                 }
             }
             catch (Exception ex)
             {
-                Log.EscribeLog("Existe un error al iniciar servicio MoveFileService: " + ex.Message);
+                Log.EscribeLog("Existe un error al iniciar servicio MoveFilesService: " + ex.Message);
             }
         }
 

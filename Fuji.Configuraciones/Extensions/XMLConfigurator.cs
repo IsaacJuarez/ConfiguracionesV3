@@ -34,11 +34,11 @@ namespace Fuji.Configuraciones.Extensions
                 _config.vchMaskCliente = nodeL["mask"]?.InnerText;
                 _config.intPuertoCliente = nodeL["puerto"]?.InnerText != "" ? Convert.ToInt32(nodeL["puerto"]?.InnerText) : 0;
 
-                //Server
-                XmlNode nodeS = doc.DocumentElement.SelectSingleNode("/Configuraciones/sitio/hostServer");
-                _config.vchIPServidor = nodeS["ip"]?.InnerText;
-                _config.intPuertoServer = nodeS["puerto"]?.InnerText != "" ? Convert.ToInt32(nodeS["puerto"]?.InnerText) : 0;
-                _config.vchAETitleServer = nodeS["AETitleServer"].InnerText;
+                ////Server
+                //XmlNode nodeS = doc.DocumentElement.SelectSingleNode("/Configuraciones/sitio/hostServer");
+                //_config.vchIPServidor = nodeS["ip"]?.InnerText;
+                //_config.intPuertoServer = nodeS["puerto"]?.InnerText != "" ? Convert.ToInt32(nodeS["puerto"]?.InnerText) : 0;
+                //_config.vchAETitleServer = nodeS["AETitleServer"].InnerText;
 
                 //Usuario
                 XmlNode nodeUser = doc.DocumentElement.SelectSingleNode("/Configuraciones/User");
@@ -86,29 +86,29 @@ namespace Fuji.Configuraciones.Extensions
             return valido;
         }
 
-        public static bool setConfiguracionServerXML(Feed2Service.clsConfiguracion _config, ref string mensaje)
-        {
-            bool valido = false;
-            try
-            {
-                XmlDocument doc = new XmlDocument();
-                doc.Load(path + "info.xml");
-                //Server
-                XmlNode nodeS = doc.DocumentElement.SelectSingleNode("/Configuraciones/sitio/hostServer");
-                nodeS["ip"].InnerText = _config.vchIPServidor;
-                nodeS["puerto"].InnerText = _config.intPuertoServer.ToString();
-                nodeS["AETitleServer"].InnerText = _config.vchAETitleServer;
-                doc.Save(path + "info.xml");
-                valido = true;
-            }
-            catch (Exception esC)
-            {
-                valido = false;
-                mensaje = esC.Message;
-                Log.EscribeLog("Existe un error al actualizar los datos de configuración. " + esC.Message);
-            }
-            return valido;
-        }
+        //public static bool setConfiguracionServerXML(Feed2Service.clsConfiguracion _config, ref string mensaje)
+        //{
+        //    bool valido = false;
+        //    try
+        //    {
+        //        XmlDocument doc = new XmlDocument();
+        //        doc.Load(path + "info.xml");
+        //        //Server
+        //        XmlNode nodeS = doc.DocumentElement.SelectSingleNode("/Configuraciones/sitio/hostServer");
+        //        nodeS["ip"].InnerText = _config.vchIPServidor;
+        //        nodeS["puerto"].InnerText = _config.intPuertoServer.ToString();
+        //        nodeS["AETitleServer"].InnerText = _config.vchAETitleServer;
+        //        doc.Save(path + "info.xml");
+        //        valido = true;
+        //    }
+        //    catch (Exception esC)
+        //    {
+        //        valido = false;
+        //        mensaje = esC.Message;
+        //        Log.EscribeLog("Existe un error al actualizar los datos de configuración. " + esC.Message);
+        //    }
+        //    return valido;
+        //}
 
         public static bool setConfiguracionUsuarioXML(clsConfiguracion _config, ref string mensaje)
         {
