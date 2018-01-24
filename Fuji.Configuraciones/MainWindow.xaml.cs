@@ -1,5 +1,4 @@
 ﻿using Fuji.Configuraciones.DataAccess;
-using Fuji.Configuraciones.Entidades;
 using Fuji.Configuraciones.Extensions;
 using Fuji.Configuraciones.Feed2Service;
 using System;
@@ -92,6 +91,9 @@ namespace Fuji.Configuraciones
                             successPass = txtPassword.Password == pass;
                         }
                     }
+                    //string pass = Security.Decrypt(_configura.vchPassword);
+                    //successUser = txtUsuario.Text.Trim().ToUpper() == _configura.vchUsuario.Trim().ToUpper();
+                    //successPass = txtPassword.Password == pass;
 
                     if (successPass && successUser)
                     {

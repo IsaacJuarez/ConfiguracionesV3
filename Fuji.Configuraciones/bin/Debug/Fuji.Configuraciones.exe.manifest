@@ -73,7 +73,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>xHGFMJVvuJRQmI+cszAD9NULTTfT4xxr7V159TriR5s=</dsig:DigestValue>
+        <dsig:DigestValue>lAU79kohxQsF8yIgbAc9fnRTKShgiRVRMHyQnx5Wk3I=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -95,13 +95,13 @@
       <dsig:DigestValue>iF3VXbJKKfI/MebLQVmNOavNsJ9QHlizt0bOSNt+bTg=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="Fuji.Configuraciones.exe.config" size="2796">
+  <file name="Fuji.Configuraciones.exe.config" size="2799">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>/Y2pH3QMx56PidULnKXVL6lv2ua521k1XwXtd1/6dKQ=</dsig:DigestValue>
+      <dsig:DigestValue>gourgx8q1HLnAlUaGtY2CKXfA5L0zAZOOC8SHeF/P7U=</dsig:DigestValue>
     </hash>
   </file>
 </asmv1:assembly>
